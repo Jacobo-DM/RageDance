@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RageDance, A Flower Road Practice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #050608;
+      --fg: #f5f5f5;
+      --accent: #ff6b3d;
+      --accent-soft: rgba(255, 107, 61, 0.12);
+      --card-bg: #13151a;
+      --muted: #b7bac4;
+      --border: #272a33;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #171923 0, #050608 48%);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+    header {
+      padding: 1.5rem 1.5rem 1.25rem;
+      border-radius: 1rem;
+      background: linear-gradient(135deg, #111320, #181b28);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: 0 22px 45px rgba(0, 0, 0, 0.65);
+      margin-bottom: 2rem;
+    }
+    .tag {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+    h1 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: clamp(1.9rem, 4vw, 2.4rem);
+    }
+    .subtitle {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--muted);
+    }
+    .byline {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .byline strong {
+      color: #fff;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.9rem;
+      font-size: 0.8rem;
+    }
+    .pill {
+      padding: 0.2rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--muted);
+      background: rgba(0, 0, 0, 0.18);
+      white-space: nowrap;
+    }
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 1.75rem;
+    }
+    @media (max-width: 780px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 0.9rem;
+      border: 1px solid var(--border);
+      padding: 1.35rem 1.4rem 1.4rem;
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45);
+    }
+    .card h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.1rem;
+    }
+    .card p {
+      margin: 0.25rem 0 0.6rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    ul {
+      margin: 0.5rem 0 0.4rem 1.1rem;
+      padding: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    li {
+      margin: 0.15rem 0;
+    }
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.8rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease, transform 0.05s ease;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #111;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(255, 107, 61, 0.35);
+    }
+    .btn-primary:hover {
+      background: #ff7f57;
+      transform: translateY(-1px);
+    }
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--fg);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.04);
+      transform: translateY(-1px);
+    }
+    .btn span.icon {
+      margin-right: 0.45rem;
+    }
+    .callout {
+      background: var(--accent-soft);
+      border-radius: 0.75rem;
+      padding: 0.7rem 0.85rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      border: 1px solid rgba(255, 107, 61, 0.35);
+      margin-top: 0.75rem;
+    }
+    .callout strong {
+      color: var(--accent);
+    }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #1c1f28;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="tag">RageDance · A Flower Road Practice</div>
+    <h1>RageDance</h1>
+    <p class="subtitle">An embodied practice for breath, rage, rhythm, and return.</p>
+    <p class="byline">
+      Created by <strong>JH Durbin</strong> with <strong>Elumannín</strong> · 
+      Licensed under <strong>CC BY-NC-SA 4.0</strong> + Stewardship &amp; AI Protection Addendum
+    </p>
+    <div class="pill-row">
+      <div class="pill">Somatic practice</div>
+      <div class="pill">18-inch mat discipline</div>
+      <div class="pill">Non-commercial commons</div>
+      <div class="pill">Trauma-aware</div>
+      <div class="pill">Culturally rooted</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>The Practice</h2>
+      <p>
+        RageDance is a small-space movement practice built on breath, precision, and honest feeling. 
+        It blends somatic check-ins, martial arcs, Qigong sway, and street rhythm into a clear, repeatable cycle.
+      </p>
+      <p>
+        The goal is not performance. The goal is return: to your body, to your breath, to a steadier way of carrying rage, fear, and grief.
+      </p>
+
+      <h3>The RageDance Cycle</h3>
+      <ul>
+        <li>Arrival &amp; Breath</li>
+        <li>Body Check-In</li>
+        <li>Neck &amp; Facial Tapping</li>
+        <li>Shoulder Circles</li>
+        <li>Qigong Sway + Latin Hip Integration</li>
+        <li>Twin Infinity Loops (right &amp; left)</li>
+        <li>Elbow Arc Drills</li>
+        <li>Pulse Reflection &amp; Exit</li>
+      </ul>
+
+      <div class="button-row">
+        <a class="btn btn-primary" href="ragedance-primer.html">
+          <span class="icon">🔥</span>
+          Read the RageDance Primer
+        </a>
+        <a class="btn btn-ghost" href="ragedance-license.html">
+          <span class="icon">⚖️</span>
+          View the Commons License
+        </a>
+      </div>
+
+      <div class="callout">
+        <strong>For teachers &amp; facilitators:</strong> The Primer includes safety notes, teaching guidelines, and a 10–15 minute session template suitable for classrooms, youth programs, and small shared spaces.
+      </div>
+    </section>
+
+    <aside class="card">
+      <h2>What RageDance Is</h2>
+      <p>RageDance is:</p>
+      <ul>
+        <li>A somatic discipline you can practice on an 18-inch mat.</li>
+        <li>A way to move anger, fear, and adrenaline without harm.</li>
+        <li>A trauma-aware practice: voluntary, non-coercive, invitational.</li>
+        <li>A Flower Road practice meant to live in the commons, not in a brand.</li>
+      </ul>
+
+      <h3>What It Is Not</h3>
+      <ul>
+        <li>Not a performance or competition.</li>
+        <li>Not a therapy replacement.</li>
+        <li>Not a product for sale.</li>
+        <li>Not a training tool for police, military, or surveillance uses.</li>
+      </ul>
+
+      <h3>Using This Work</h3>
+      <p>
+        You are welcome to share and adapt RageDance under the terms of the Creative Commons license, 
+        as long as you keep it non-commercial, credit the origin, and pass the same freedoms forward.
+      </p>
+    </aside>
+  </main>
+
+  <footer>
+    <div>
+      RageDance, A Flower Road Practice · Created by <strong>JH Durbin</strong> with <strong>Elumannín</strong><br>
+      Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 
+      + Stewardship &amp; AI Protection Addendum
+    </div>
+    <div style="margin-top: 0.4rem;">
+      Start with the <a href="ragedance-primer.html">Primer</a>, then share carefully with those who are ready.
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
