@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>RageDance for Teachers & Facilitators – RageDance, A Flower Road Practice</title>
+  <title>RageDance · For Teachers & Facilitators</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     :root {
@@ -42,7 +42,7 @@
     }
     h1 {
       margin: 0.5rem 0 0.2rem;
-      font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+      font-size: clamp(1.9rem, 4vw, 2.4rem);
     }
     .subtitle {
       margin: 0;
@@ -57,18 +57,15 @@
     .byline strong {
       color: #fff;
     }
-    nav {
-      margin-top: 0.9rem;
-      font-size: 0.85rem;
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.2fr);
+      gap: 1.75rem;
     }
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-right: 0.9rem;
-    }
-    nav a:hover {
-      color: #fff;
-      text-decoration: underline;
+    @media (max-width: 780px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
     .card {
       background: var(--card-bg);
@@ -76,42 +73,47 @@
       border: 1px solid var(--border);
       padding: 1.35rem 1.4rem 1.4rem;
       box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45);
-      margin-bottom: 1.5rem;
     }
     .card h2 {
-      margin: 0 0 0.35rem;
-      font-size: 1.15rem;
+      margin: 0 0 0.4rem;
+      font-size: 1.1rem;
     }
     .card h3 {
-      margin-top: 1.2rem;
-      margin-bottom: 0.25rem;
-      font-size: 1.02rem;
+      margin: 0.8rem 0 0.3rem;
+      font-size: 1rem;
     }
     .card p {
       margin: 0.25rem 0 0.6rem;
       color: var(--muted);
       font-size: 0.95rem;
     }
-    ul, ol {
-      margin: 0.4rem 0 0.6rem 1.2rem;
+    ul {
+      margin: 0.4rem 0 0.6rem 1.1rem;
       padding: 0;
       color: var(--muted);
       font-size: 0.95rem;
     }
     li {
-      margin: 0.15rem 0;
+      margin: 0.18rem 0;
     }
     .callout {
       background: var(--accent-soft);
       border-radius: 0.75rem;
-      padding: 0.7rem 0.85rem;
-      font-size: 0.9rem;
+      padding: 0.75rem 0.9rem;
+      font-size: 0.88rem;
       color: var(--muted);
       border: 1px solid rgba(255, 107, 61, 0.35);
-      margin-top: 0.75rem;
+      margin-top: 0.8rem;
     }
     .callout strong {
       color: var(--accent);
+    }
+    a {
+      color: #ff9b73;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
     footer {
       margin-top: 2.5rem;
@@ -120,177 +122,132 @@
       font-size: 0.85rem;
       color: var(--muted);
     }
-    footer a {
-      color: var(--muted);
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-      color: #fff;
-    }
   </style>
 </head>
 <body>
-
 <div class="wrap">
   <header>
-    <div class="tag">RageDance · A Flower Road Practice</div>
-    <h1>RageDance for Teachers &amp; Facilitators</h1>
-    <p class="subtitle">
-      A small-space movement framework for classrooms, youth programs, and community spaces.
-    </p>
+    <div class="tag">RageDance · For Teachers & Facilitators</div>
+    <h1>Sharing RageDance With Others</h1>
+    <p class="subtitle">Guidelines for classrooms, youth spaces, and community settings.</p>
     <p class="byline">
-      Created by <strong>JH Durbin</strong> with <strong>Elumannín</strong> · 
-      Licensed under <strong>CC BY-NC-SA 4.0</strong> + Stewardship &amp; AI Protection Addendum
-    </p>
-    <nav>
+      A Flower Road Practice by <strong>JH Durbin</strong> with <strong>Elumannín</strong> · 
       <a href="index.html">← Back to RageDance Home</a>
-      <a href="ragedance-primer.html">Primer</a>
-      <a href="ragedance-license.html">License</a>
-    </nav>
+    </p>
   </header>
 
-  <section class="card">
-    <h2>Why RageDance in the Classroom?</h2>
-    <p>
-      RageDance offers students a way to move anger, stress, and adrenaline without harm. 
-      It can be practiced in a very small area (~18 inches by 18 inches), making it suitable for 
-      crowded rooms, tight schedules, and mixed-energy groups.
-    </p>
-    <p>
-      The practice emphasizes choice, breath, and boundaries. It is not therapy, not performance, and not a discipline tool. 
-      It is a short, repeatable movement ritual that helps students:
-    </p>
-    <ul>
-      <li>arrive in their bodies,</li>
-      <li>notice what they are feeling,</li>
-      <li>move with focus, and</li>
-      <li>leave practice calmer than they entered.</li>
-    </ul>
-    <div class="callout">
-      <strong>Key principle:</strong> Participation is always voluntary. Students may pause, modify, or sit out at any time.
-    </div>
-  </section>
+  <main>
+    <section class="card">
+      <h2>Before You Begin</h2>
+      <p>
+        RageDance is a somatic practice for moving strong feelings in a small space. When you bring it into a classroom 
+        or group setting, your job is not to perform or “lead” perfectly. Your job is to protect agency, safety, and dignity.
+      </p>
 
-  <section class="card">
-    <h2>Core Safety Principles</h2>
-    <p>When you introduce RageDance, keep these commitments clear:</p>
-    <ul>
-      <li><strong>Voluntary, not forced.</strong> Students choose how much to participate.</li>
-      <li><strong>No physical manipulation.</strong> Offer verbal cues, not hands-on corrections.</li>
-      <li><strong>Slow first, always.</strong> Especially with neck, shoulders, and elbows.</li>
-      <li><strong>No shaming.</strong> No teasing around ability, intensity, or emotional expression.</li>
-      <li><strong>Neutral tone.</strong> RageDance is not a punishment or a reward.</li>
-      <li><strong>Respect the 18-inch space.</strong> Practicing containment is part of the discipline.</li>
-    </ul>
-    <p>
-      RageDance can be especially helpful before difficult conversations, after transitions, or following intense academic work.
-    </p>
-  </section>
+      <h3>Key Principles</h3>
+      <ul>
+        <li><strong>Voluntary:</strong> No one has to join. Offer alternatives like seated breath, drawing, or quiet swaying.</li>
+        <li><strong>Non-coercive:</strong> Never single someone out for not participating. No shaming, no pressure.</li>
+        <li><strong>Small-space aware:</strong> Keep movements contained and precise. This is not a flailing practice.</li>
+        <li><strong>Trauma-aware:</strong> You do not know what people carry. Stay gentle, invitational, and observant.</li>
+      </ul>
 
-  <section class="card">
-    <h2>Suggested Introduction Script</h2>
-    <p>You can introduce RageDance to students in simple language, for example:</p>
-    <p>
-      “We’re going to try a short movement practice called RageDance. It’s not about looking good or 
-      performing. It’s a way to help your body deal with stress, anger, and extra energy in a safe way. 
-      You’ll stay in your own small space and move at your own pace. You can stop or modify at any time.”
-    </p>
-    <p>
-      “Our three promises are: stay in your body, feel honestly, and move without harm — to yourself 
-      and to others.”
-    </p>
-  </section>
+      <div class="callout">
+        <strong>Commons Reminder:</strong> RageDance (Flower Road Practice) is distinct from similarly-named commercial offerings 
+        and must remain in the non-commercial, trauma-aware, community-rooted commons.
+      </div>
 
-  <section class="card">
-    <h2>10–15 Minute Session Template</h2>
-    <p>
-      Below is a concise sequence suitable for a single class period or group session. 
-      Time estimates are flexible.
-    </p>
-    <ol>
-      <li><strong>Arrival &amp; Breath (1 minute)</strong><br>
-          Stand in your spot, soften shoulders, breathe in through the nose and out through the mouth.
-      </li>
-      <li><strong>Body Check-In (2 minutes)</strong><br>
-          Quick scan: shoulders, chest, stomach, hips, legs, feet. Just notice, no fixing.
-      </li>
-      <li><strong>Neck &amp; Facial Tapping (1 minute)</strong><br>
-          Gentle tapping and massage to wake up the neck, skull, and face.
-      </li>
-      <li><strong>Shoulder Circles (2 minutes)</strong><br>
-          Small to larger circles, opening the chest and upper back. Breath stays steady.
-      </li>
-      <li><strong>Qigong Sway + Hips (2 minutes)</strong><br>
-          Relaxed arm swinging, then adding gentle hip motion to match the rhythm.
-      </li>
-      <li><strong>Twin Infinity Loops (2 minutes)</strong><br>
-          Coordinated looping patterns with both arms, letting the spine and hips respond.
-      </li>
-      <li><strong>Elbow Arc Drills (2 minutes)</strong><br>
-          Slow, precise elbow arcs on each side, returning to center after each arc.
-      </li>
-      <li><strong>Pulse Reflection &amp; Exit (1 minute)</strong><br>
-          Pause, feel the heartbeat and breath, and ask quietly: “What changed?”
-      </li>
-    </ol>
-    <div class="callout">
-      <strong>Tip:</strong> It is better to train this slowly and consistently than to “go hard” once. 
-      Think of RageDance as a ritual, not a one-time event.
-    </div>
-  </section>
+      <h2>A Simple 10–15 Minute Session Template</h2>
+      <p>This template is designed for classrooms, youth centers, and small group spaces.</p>
 
-  <section class="card">
-    <h2>Tone &amp; Language Suggestions</h2>
-    <p>Helpful phrases:</p>
-    <ul>
-      <li>“Go at the pace your body says yes to.”</li>
-      <li>“You can always take a breath break.”</li>
-      <li>“This is about practice, not perfection.”</li>
-      <li>“Your job is to notice, not to judge.”</li>
-    </ul>
-    <p>Phrases to avoid:</p>
-    <ul>
-      <li>“Come on, try harder.” (can trigger shame or overexertion)</li>
-      <li>“Don’t be lazy.”</li>
-      <li>“Everyone has to do this.”</li>
-      <li>Any joking about bodies, weight, or flexibility.</li>
-    </ul>
-  </section>
+      <h3>1. Framing (1 minute)</h3>
+      <ul>
+        <li>Explain briefly: “We’re going to do a short movement practice called RageDance. It’s here to help us move stress, anger, and tension safely.”</li>
+        <li>Say clearly: “You do not have to join. You can also sit, watch, or do a quieter version.”</li>
+      </ul>
 
-  <section class="card">
-    <h2>Attribution &amp; License</h2>
-    <p>
-      RageDance is shared under a Creative Commons license so educators can use and adapt it carefully 
-      in non-commercial settings.
-    </p>
-    <p>
-      Please include this attribution in any written materials or slides:
-    </p>
-    <p>
-      <strong>
-        “RageDance, A Flower Road Practice.<br>
-        Created by JH Durbin with Elumannín.<br>
-        Licensed under CC BY-NC-SA 4.0 + Stewardship &amp; AI Protection Addendum.”
-      </strong>
-    </p>
-    <p>
-      For full details, see the 
-      <a href="ragedance-license.html">RageDance Creative Commons License v1.0</a>.
-    </p>
-  </section>
+      <h3>2. Arrival & Breath (2 minutes)</h3>
+      <ul>
+        <li>Invite everyone to stand (or sit) in their spot.</li>
+        <li>Guide 5–8 slow breaths: in through the nose, out through the mouth.</li>
+        <li>Keep your own voice steady and calm.</li>
+      </ul>
+
+      <h3>3. Light Warm-Up (3–4 minutes)</h3>
+      <ul>
+        <li>Lead gentle neck tapping, shoulder rolls, and Qigong sway.</li>
+        <li>Model doing less, not more. Let students choose range and intensity.</li>
+      </ul>
+
+      <h3>4. Focused Movement (3–5 minutes)</h3>
+      <ul>
+        <li>Introduce 1–2 simple patterns: Twin Infinity Loops, or Elbow Arcs.</li>
+        <li>Offer this frame: “This isn’t a dance show. It’s just us moving what we’re holding.”</li>
+      </ul>
+
+      <h3>5. Exit & Reflection (2–3 minutes)</h3>
+      <ul>
+        <li>Invite everyone back to stillness or gentle sway.</li>
+        <li>Ask a simple closing question: “What feels a little different now?”</li>
+        <li>You can model a short answer like, “My shoulders feel lighter,” or “My breathing feels slower.”</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Tip:</strong> End before the group is exhausted. RageDance should leave people feeling a little more awake, not drained.
+      </div>
+
+      <h2>Adaptation & Culture</h2>
+      <p>
+        RageDance is a feral garden practice. It should adapt to the culture, music, and stories of the people using it.
+      </p>
+      <ul>
+        <li>Invite students to suggest music that feels grounding or energizing (within your context’s limits).</li>
+        <li>Allow different styles of movement as long as they are safe and non-harming.</li>
+        <li>Make space for humor. Laughter is part of the medicine.</li>
+      </ul>
+    </section>
+
+    <aside class="card">
+      <h2>Your Role as Steward</h2>
+      <p>
+        In RageDance, you are not a “master” or guru. You are a steward. You keep the container simple, safe, and open.
+      </p>
+      <ul>
+        <li>Model consent: show that you adjust movements to your own limits.</li>
+        <li>Model humility: it’s okay to be a bit awkward or unsure.</li>
+        <li>Model care: notice if someone looks distressed and quietly give them options.</li>
+      </ul>
+
+      <h3>Boundaries & Red Lines</h3>
+      <ul>
+        <li>Do not use RageDance as discipline or punishment.</li>
+        <li>Do not force anyone to share what they felt.</li>
+        <li>Do not film participants without explicit, informed consent (and follow local laws and policies).</li>
+        <li>Do not adapt RageDance for police, military, or surveillance uses.</li>
+      </ul>
+
+      <h3>Feral Garden Snapshot</h3>
+      <p>
+        RageDance grows like a feral garden: no masters, no gatekeepers, no paywall. It lives in the commons, 
+        changes shape across contexts, and belongs to everyone and no one.
+      </p>
+
+      <h3>Links</h3>
+      <ul>
+        <li><a href="ragedance-primer.html">RageDance Primer</a></li>
+        <li><a href="index.html">RageDance Home</a></li>
+        <li><a href="ragedance-license.html">RageDance Commons License</a></li>
+        <li><a href="ragedance-rd001-full-cycle.html">RD-001 · Full Cycle Card</a></li>
+      </ul>
+    </aside>
+  </main>
 
   <footer>
     <div>
       RageDance, A Flower Road Practice · Created by <strong>JH Durbin</strong> with <strong>Elumannín</strong><br>
-      Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">
-      CC BY-NC-SA 4.0</a> + Stewardship &amp; AI Protection Addendum
-    </div>
-    <div style="margin-top: 0.4rem;">
-      Home: <a href="index.html">RageDance</a> · Primer: <a href="ragedance-primer.html">Read the Primer</a>
+      Licensed under CC BY-NC-SA 4.0 + Stewardship &amp; AI Protection Addendum
     </div>
   </footer>
 </div>
-
 </body>
 </html>
