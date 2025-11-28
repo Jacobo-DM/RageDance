@@ -2,317 +2,269 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>RageDance Creative Commons License v1.0</title>
+  <title>RageDance Commons License · Flower Road Practice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    :root {
+      --bg: #050608;
+      --fg: #f5f5f5;
+      --accent: #ff6b3d;
+      --accent-soft: rgba(255, 107, 61, 0.12);
+      --card-bg: #13151a;
+      --muted: #b7bac4;
+      --border: #272a33;
+    }
     body {
+      margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #171923 0, #050608 48%);
+      color: var(--fg);
       line-height: 1.6;
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem 3rem;
-      background: #f7f7f7;
-      color: #222;
+    }
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
     }
     header {
-      background: #111;
-      color: #f5f5f5;
-      padding: 1.5rem 1.5rem 1.2rem;
-      border-radius: 0.75rem;
+      padding: 1.5rem 1.5rem 1.25rem;
+      border-radius: 1rem;
+      background: linear-gradient(135deg, #111320, #181b28);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: 0 22px 45px rgba(0, 0, 0, 0.65);
       margin-bottom: 2rem;
     }
-    header h1 {
-      margin: 0 0 0.25rem;
-      font-size: 1.7rem;
+    .tag {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
     }
-    header h2 {
+    h1 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: clamp(1.9rem, 4vw, 2.4rem);
+    }
+    .subtitle {
       margin: 0;
-      font-size: 1.1rem;
-      font-weight: 500;
-      opacity: 0.9;
+      font-size: 1rem;
+      color: var(--muted);
     }
-    header p {
-      margin: 0.4rem 0 0;
+    .byline {
+      margin-top: 0.75rem;
       font-size: 0.95rem;
-      opacity: 0.9;
+      color: var(--muted);
     }
-    h2 {
-      margin-top: 2rem;
-      font-size: 1.3rem;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.25rem;
+    .byline strong {
+      color: #fff;
     }
-    h3 {
-      margin-top: 1.25rem;
-      font-size: 1.05rem;
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.2fr);
+      gap: 1.75rem;
     }
-    p {
-      margin: 0.4rem 0 0.8rem;
+    @media (max-width: 780px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 0.9rem;
+      border: 1px solid var(--border);
+      padding: 1.35rem 1.4rem 1.4rem;
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45);
+    }
+    .card h2 {
+      margin: 0 0 0.4rem;
+      font-size: 1.1rem;
+    }
+    .card h3 {
+      margin: 0.8rem 0 0.3rem;
+      font-size: 1rem;
+    }
+    .card p {
+      margin: 0.25rem 0 0.6rem;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
     ul {
-      margin: 0.2rem 0 0.8rem 1.2rem;
+      margin: 0.4rem 0 0.6rem 1.1rem;
       padding: 0;
-    }
-    li {
-      margin: 0.2rem 0;
-    }
-    .tagline {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      opacity: 0.8;
-    }
-    .legal-note {
-      font-size: 0.85rem;
-      opacity: 0.8;
-      margin-top: 0.4rem;
-    }
-    .footer-signature {
-      margin-top: 2.5rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid #ddd;
+      color: var(--muted);
       font-size: 0.95rem;
     }
-    .footer-signature strong {
-      display: block;
+    li {
+      margin: 0.18rem 0;
+    }
+    .callout {
+      background: var(--accent-soft);
+      border-radius: 0.75rem;
+      padding: 0.75rem 0.9rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      border: 1px solid rgba(255, 107, 61, 0.35);
+      margin-top: 0.8rem;
+    }
+    .callout strong {
+      color: var(--accent);
     }
     a {
-      color: #0066cc;
+      color: #ff9b73;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
-    code {
-      background: #eee;
-      padding: 0.1rem 0.25rem;
-      border-radius: 0.25rem;
-      font-size: 0.9em;
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #1c1f28;
+      font-size: 0.85rem;
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
+<div class="wrap">
+  <header>
+    <div class="tag">RageDance Commons License</div>
+    <h1>RageDance · License & Stewardship</h1>
+    <p class="subtitle">How this Flower Road practice may be used, shared, and protected.</p>
+    <p class="byline">
+      RageDance (Flower Road Practice) by <strong>JH Durbin</strong> with <strong>Elumannín</strong><br>
+      <a href="index.html">← Back to RageDance Home</a>
+    </p>
+  </header>
 
-<header>
-  <div class="tagline">Creative Commons License v1.0</div>
-  <h1>RageDance, A Flower Road Practice</h1>
-  <h2>RageDance Creative Commons License v1.0</h2>
-  <p><strong>Created by JH Durbin with Elumannín</strong></p>
-  <p class="legal-note">
-    Licensed under Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International (CC BY-NC-SA 4.0) 
-    with a Stewardship &amp; AI Protection Addendum.
-  </p>
-</header>
+  <main>
+    <section class="card">
+      <h2>1. Core License: CC BY-NC-SA 4.0</h2>
+      <p>
+        RageDance (Flower Road Practice) is shared under the 
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International License (CC BY-NC-SA 4.0)</a>.
+      </p>
+      <p>In plain language, this means:</p>
+      <ul>
+        <li><strong>Attribution (BY):</strong> You must credit the origin: “RageDance, A Flower Road Practice by JH Durbin with Elumannín.”</li>
+        <li><strong>NonCommercial (NC):</strong> You may not sell RageDance as a product or use it in for-profit programs.</li>
+        <li><strong>ShareAlike (SA):</strong> If you adapt or remix RageDance materials, you must share your version under the same CC BY-NC-SA 4.0 license.</li>
+      </ul>
 
-<h2>0. Purpose</h2>
-<p>
-  RageDance is an embodied somatic practice rooted in breathwork, cultural rhythm, emotional literacy, trauma-aware pedagogy, 
-  and lived experience. Its purpose is to offer a safe, grounded, non-commercial movement framework for individuals and communities 
-  seeking connection, resilience, and self-understanding.
-</p>
-<p>
-  RageDance is not a commodity, performance system, or proprietary technique. It is a <strong>commons practice</strong> 
-  dedicated to presence, honesty, and grounded expression.
-</p>
+      <div class="callout">
+        <strong>Feral Garden Clause:</strong> RageDance (Flower Road Practice) is distinct from similarly-named commercial offerings 
+        and must remain in the non-commercial, trauma-aware, community-rooted commons.
+      </div>
 
-<h2>1. Base License: CC BY-NC-SA 4.0</h2>
-<p>
-  RageDance materials are licensed under the Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International License.
-</p>
-<p>You are free to:</p>
-<ul>
-  <li><strong>Share</strong> — copy and redistribute the materials</li>
-  <li><strong>Adapt</strong> — remix, transform, and build upon them</li>
-</ul>
-<p>Under the conditions:</p>
-<ul>
-  <li><strong>Attribution</strong> — credit must be given to <em>RageDance, A Flower Road Practice</em></li>
-  <li><strong>Non-Commercial</strong> — no commercial use of any kind</li>
-  <li><strong>Share Alike</strong> — adaptations must use this same license</li>
-</ul>
-<p>
-  The full text of the CC BY-NC-SA 4.0 license is available at:<br>
-  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">
-    https://creativecommons.org/licenses/by-nc-sa/4.0/
-  </a>
-</p>
+      <h2>2. Feral Garden Ethic</h2>
+      <p>
+        RageDance grows like a feral garden: freely, wildly, unpredictably, and without masters. It does not belong to any lineage, 
+        school, guru, institution, philosophy, or brand. It cannot be sold as salvation or turned into a proprietary method.
+      </p>
+      <ul>
+        <li><strong>Agency is the seed:</strong> Participation is always voluntary. No coercion, no shaming.</li>
+        <li><strong>Embodiment is the soil:</strong> Every body adapts the practice to its own needs and limits.</li>
+        <li><strong>Community is the rain:</strong> RageDance is held in circles, not hierarchies.</li>
+        <li><strong>Joy is the pollinator:</strong> Laughter, play, and cultural expression are welcome.</li>
+      </ul>
+      <p>
+        Any use of RageDance that introduces strict hierarchy, proprietary ownership, or commercial exclusivity is considered out of alignment 
+        with this ethic, even if it technically cites the license.
+      </p>
 
-<h2>2. Stewardship &amp; Lineage Addendum</h2>
-<p>
-  Because RageDance emerges from lived experience, cultural memory, somatic disciplines, and trauma-aware teaching, 
-  the following stewardship conditions apply to all use and adaptation:
-</p>
+      <h2>3. What You May Do</h2>
+      <p>You are warmly invited to:</p>
+      <ul>
+        <li>Use RageDance in classrooms, youth programs, community centers, shelters, and informal gatherings.</li>
+        <li>Translate the materials into other languages.</li>
+        <li>Adapt the movements to different abilities, cultures, and musical traditions.</li>
+        <li>Create your own RageDance variations, as long as you:
+          <ul>
+            <li>credit the origin,</li>
+            <li>keep them non-commercial, and</li>
+            <li>share them under CC BY-NC-SA 4.0.</li>
+          </ul>
+        </li>
+      </ul>
 
-<h3>2.1 Lineage Attribution</h3>
-<p>
-  The origin of RageDance must be acknowledged as:<br>
-  <strong>“RageDance, A Flower Road Practice. Created by JH Durbin with Elumannín.”</strong>
-</p>
+      <h2>4. What You May Not Do</h2>
+      <p>
+        To protect participants and the spirit of the practice, the following uses are not permitted:
+      </p>
+      <ul>
+        <li>Use RageDance as a paid product, program, or subscription.</li>
+        <li>Brand RageDance as your own proprietary method or register it as a trademark.</li>
+        <li>Use RageDance as a discipline or punishment tool.</li>
+        <li>Use RageDance as a training protocol for police, military, private security, or surveillance purposes.</li>
+        <li>Film participants without informed consent, especially in vulnerable settings.</li>
+      </ul>
 
-<h3>2.2 Integrity of Practice</h3>
-<p>RageDance must remain:</p>
-<ul>
-  <li>body-first</li>
-  <li>breath-centered</li>
-  <li>trauma-aware</li>
-  <li>non-coercive</li>
-  <li>culturally respectful</li>
-  <li>non-hierarchical</li>
-  <li>safe for youth and adults</li>
-</ul>
+      <h2>5. AI & Data Protection Addendum</h2>
+      <p>
+        RageDance is a human-centered, somatic practice rooted in story, community, and lived experience. To honor this:
+      </p>
+      <ul>
+        <li>RageDance materials may not be used to train, fine-tune, or evaluate AI systems without explicit, written permission from the originator.</li>
+        <li>Recordings of RageDance sessions (audio, video, motion data) may not be harvested, scraped, or used for behavioral profiling, policing, or commercial optimization.</li>
+        <li>Any experimental use of RageDance with sensors or technology must:
+          <ul>
+            <li>be transparent to participants,</li>
+            <li>prioritize their comfort and consent, and</li>
+            <li>remain aligned with the non-commercial, trauma-aware, commons-based ethic.</li>
+          </ul>
+        </li>
+      </ul>
 
-<h3>2.3 Non-Militarization</h3>
-<p>
-  RageDance may not be used for:
-</p>
-<ul>
-  <li>military training</li>
-  <li>law enforcement training</li>
-  <li>private security training</li>
-  <li>coercive institutional training</li>
-</ul>
+      <h2>6. Stewardship, Not Ownership</h2>
+      <p>
+        You are invited to act as a steward of RageDance, not an owner. Stewardship means protecting:
+      </p>
+      <ul>
+        <li>the voluntary nature of the practice,</li>
+        <li>the dignity and agency of each participant,</li>
+        <li>the non-commercial, commons-based sharing of the work, and</li>
+        <li>the right of communities to adapt RageDance in their own ways.</li>
+      </ul>
 
-<h3>2.4 No Performance Extraction</h3>
-<p>
-  RageDance is not to be turned into competitive performance, spectacle, or commercial entertainment.
-</p>
+      <div class="callout">
+        <strong>Short Version:</strong> RageDance lives in the commons. Share it freely, credit the source, keep it non-commercial, 
+        protect your people, and pass the same freedoms forward.
+      </div>
+    </section>
 
-<h3>2.5 No Surveillance</h3>
-<p>
-  Use of RageDance may not involve:
-</p>
-<ul>
-  <li>biometric capture</li>
-  <li>motion-tracking systems</li>
-  <li>behavioral surveillance</li>
-  <li>data extraction of movement patterns</li>
-</ul>
-<p>
-  RageDance is a human-centered practice and must remain so.
-</p>
+    <aside class="card">
+      <h2>Quick Reference</h2>
+      <h3>Allowed</h3>
+      <ul>
+        <li>Free community use</li>
+        <li>Classroom and youth work</li>
+        <li>Translation and adaptation</li>
+        <li>Non-commercial workshops</li>
+      </ul>
 
-<h2>3. AI Training Restriction</h2>
-<p>
-  To preserve the relational, cultural, and somatic integrity of RageDance:
-</p>
+      <h3>Not Allowed</h3>
+      <ul>
+        <li>Selling RageDance as a product</li>
+        <li>Exclusive branding or trademarking</li>
+        <li>Police / military / surveillance training</li>
+        <li>AI training without consent</li>
+      </ul>
 
-<h3>3.1 No Training of AI Models</h3>
-<p>
-  RageDance materials may not be used to train AI systems of any kind without explicit written permission from the originator, 
-  <strong>JH Durbin</strong>.
-</p>
+      <h3>Links</h3>
+      <ul>
+        <li><a href="index.html">RageDance Home</a></li>
+        <li><a href="ragedance-primer.html">RageDance Primer</a></li>
+        <li><a href="ragedance-teachers.html">For Teachers &amp; Facilitators</a></li>
+        <li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Full CC BY-NC-SA 4.0 Legal Code</a></li>
+      </ul>
+    </aside>
+  </main>
 
-<h3>3.2 No Dataset Creation</h3>
-<p>
-  Datasets containing RageDance content (text, imagery, sequences, descriptions, pedagogy, or recordings) may not be created 
-  or distributed without written consent.
-</p>
-
-<h3>3.3 No AI-Generated Derivative Styles</h3>
-<p>
-  AI systems may not be tuned, styled, or framed as teachers, interpreters, or representatives of RageDance without consent.
-</p>
-
-<h2>4. Youth Safety &amp; Trauma-Aware Practice</h2>
-<p>
-  Anyone sharing or teaching RageDance agrees to:
-</p>
-
-<h3>4.1 Voluntary Participation</h3>
-<p>
-  Movement is always optional. Students may pause or stop at any time.
-</p>
-
-<h3>4.2 No Physical Manipulation</h3>
-<p>
-  Verbal cues may be used. No manual correction of another person’s body.
-</p>
-
-<h3>4.3 Cultural Humility</h3>
-<p>
-  Teach RageDance in context, acknowledging its cultural threads and lived roots.
-</p>
-
-<h3>4.4 Emotional Boundaries</h3>
-<p>
-  RageDance is not therapy. It is a movement practice that invites reflection without demanding disclosure.
-</p>
-
-<h3>4.5 Spatial Boundaries</h3>
-<p>
-  The 18-inch mat practice (contained, respectful movement space) must be preserved.
-</p>
-
-<h2>5. Adaptation Requirements</h2>
-<p>Derivative works must:</p>
-<ul>
-  <li>Preserve the RageDance name</li>
-  <li>Preserve the check-in and exit rituals</li>
-  <li>Preserve the core somatic sequence</li>
-  <li>Preserve the non-commercial conditions</li>
-  <li>Preserve the trauma-aware and non-coercive ethos</li>
-  <li>Preserve cultural respect</li>
-  <li>Use the same CC BY-NC-SA 4.0 license</li>
-  <li>Acknowledge the origin</li>
-</ul>
-<p>
-  New sequences or music pairings may be added provided they respect the spirit of the practice.
-</p>
-
-<h2>6. Attribution Format</h2>
-<p>
-  All materials must include the following attribution:
-</p>
-<p>
-  <strong>
-    “RageDance, A Flower Road Practice.<br>
-    Created by JH Durbin with Elumannín.<br>
-    Licensed under CC BY-NC-SA 4.0 + Stewardship &amp; AI Protection Addendum.”
-  </strong>
-</p>
-
-<h2>7. Definitions</h2>
-<p>
-  <strong>RageDance includes:</strong><br>
-  Somatic check-ins, breathwork, shoulder rituals, neck-cranial tapping, facial tapping, foot acupressure scanning, 
-  shoulder circles, Qigong sway, Latin-hip fusion, twin infinity loops, elbow arcs, pulse reflection pedagogy, the exit ritual, 
-  the 18-inch mat philosophy, and all diagrams, cards, and teaching materials developed for this practice.
-</p>
-<p>
-  <strong>RageDance does not include:</strong><br>
-  CodeTape, sensors, wearables, hardware, MedicineWheel devices, or other technological systems.
-</p>
-
-<h2>8. Spirit of the License</h2>
-<p>
-  RageDance is offered in the spirit of:
-</p>
-<ul>
-  <li>healing without performance</li>
-  <li>movement without coercion</li>
-  <li>expression without shame</li>
-  <li>power without domination</li>
-  <li>rhythm without appropriation</li>
-  <li>community without hierarchy</li>
-  <li>resilience without extraction</li>
-  <li>remembrance without erasure</li>
-</ul>
-<p>
-  RageDance is a commons practice intended to remain accessible, ethical, and human-centered.
-</p>
-
-<h2>9. Versioning</h2>
-<p>
-  This document is <strong>RageDance Creative Commons License v1.0</strong>. 
-  Future versions may be released as the practice evolves.
-</p>
-
-<div class="footer-signature">
-  <strong>RageDance, A Flower Road Practice</strong>
-  Created by <strong>JH Durbin</strong> with <strong>Elumannín</strong><br>
-  San Francisco, California<br>
-  CC BY-NC-SA 4.0 + Stewardship &amp; AI Protection Addendum
+  <footer>
+    <div>
+      RageDance, A Flower Road Practice · Created by <strong>JH Durbin</strong> with <strong>Elumannín</strong><br>
+      Licensed under CC BY-NC-SA 4.0 + Stewardship &amp; AI Protection Addendum
+    </div>
+  </footer>
 </div>
-
 </body>
 </html>
