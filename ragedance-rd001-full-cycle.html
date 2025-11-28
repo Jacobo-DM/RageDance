@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>RD-001 · Full RageDance Cycle – RageDance, A Flower Road Practice</title>
+  <title>RageDance RD-001 · Full Cycle Card</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     :root {
@@ -22,17 +22,17 @@
       line-height: 1.6;
     }
     .wrap {
-      max-width: 860px;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 2.25rem 1.25rem 3rem;
+      padding: 2.5rem 1.25rem 3rem;
     }
     header {
-      padding: 1.25rem 1.35rem 1.1rem;
+      padding: 1.3rem 1.4rem 1.1rem;
       border-radius: 1rem;
       background: linear-gradient(135deg, #111320, #181b28);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      box-shadow: 0 22px 45px rgba(0, 0, 0, 0.65);
-      margin-bottom: 1.7rem;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.65);
+      margin-bottom: 1.8rem;
     }
     .tag {
       font-size: 0.8rem;
@@ -41,8 +41,8 @@
       color: var(--muted);
     }
     h1 {
-      margin: 0.4rem 0 0.15rem;
-      font-size: clamp(1.5rem, 3.1vw, 2rem);
+      margin: 0.45rem 0 0.15rem;
+      font-size: clamp(1.7rem, 4vw, 2.2rem);
     }
     .subtitle {
       margin: 0;
@@ -50,238 +50,205 @@
       color: var(--muted);
     }
     .byline {
-      margin-top: 0.6rem;
+      margin-top: 0.7rem;
       font-size: 0.9rem;
       color: var(--muted);
     }
     .byline strong {
       color: #fff;
     }
-    nav {
-      margin-top: 0.8rem;
-      font-size: 0.85rem;
-    }
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-right: 0.9rem;
-    }
-    nav a:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
     .card {
       background: var(--card-bg);
       border-radius: 0.9rem;
       border: 1px solid var(--border);
-      padding: 1.35rem 1.4rem 1.5rem;
+      padding: 1.3rem 1.4rem 1.4rem;
       box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45);
-      margin-bottom: 1.5rem;
     }
-    .card h2 {
-      margin: 0 0 0.35rem;
-      font-size: 1.15rem;
+    h2 {
+      margin: 0 0 0.4rem;
+      font-size: 1.08rem;
     }
-    .card h3 {
-      margin-top: 1.1rem;
-      margin-bottom: 0.25rem;
-      font-size: 1rem;
+    h3 {
+      margin: 0.9rem 0 0.35rem;
+      font-size: 0.98rem;
     }
     p {
-      margin: 0.25rem 0 0.6rem;
+      margin: 0.3rem 0 0.6rem;
       color: var(--muted);
       font-size: 0.95rem;
     }
-    ol {
-      margin: 0.4rem 0 0.4rem 1.3rem;
+    ul {
+      margin: 0.35rem 0 0.6rem 1.1rem;
       padding: 0;
       color: var(--muted);
       font-size: 0.95rem;
     }
     li {
-      margin: 0.22rem 0;
+      margin: 0.18rem 0;
     }
-    .phase-title {
-      color: var(--fg);
+    .step-label {
       font-weight: 600;
+      color: #fff;
     }
-    .label {
-      display: inline-block;
-      padding: 0.18rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
+    .time {
+      font-size: 0.85rem;
       color: var(--muted);
-      margin-bottom: 0.4rem;
-    }
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-top: 0.35rem;
-    }
-    .pill {
-      padding: 0.16rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(0, 0, 0, 0.25);
-      font-size: 0.78rem;
-      color: var(--muted);
-      white-space: nowrap;
+      font-style: italic;
     }
     .callout {
       background: var(--accent-soft);
       border-radius: 0.75rem;
       padding: 0.7rem 0.85rem;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       color: var(--muted);
       border: 1px solid rgba(255, 107, 61, 0.35);
-      margin-top: 0.75rem;
+      margin-top: 0.8rem;
     }
     .callout strong {
       color: var(--accent);
     }
-    footer {
-      margin-top: 2.2rem;
-      padding-top: 1rem;
-      border-top: 1px solid #1c1f28;
-      font-size: 0.85rem;
-      color: var(--muted);
+    .footer-links {
+      margin-top: 1rem;
+      font-size: 0.9rem;
     }
-    footer a {
-      color: var(--muted);
+    .footer-links a {
+      color: #ff9b73;
       text-decoration: none;
     }
-    footer a:hover {
+    .footer-links a:hover {
       text-decoration: underline;
-      color: #fff;
+    }
+    .small {
+      font-size: 0.85rem;
+    }
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+      .wrap {
+        padding: 1rem;
+        box-shadow: none;
+      }
+      header, .card {
+        box-shadow: none;
+        background: #fff;
+        border-color: #ccc;
+      }
     }
   </style>
 </head>
 <body>
-
 <div class="wrap">
   <header>
-    <div class="tag">RageDance Card · RD-001</div>
-    <h1>Full RageDance Cycle</h1>
-    <p class="subtitle">
-      One complete 10–15 minute sequence on an 18-inch mat.
-    </p>
+    <div class="tag">RageDance · RD-001</div>
+    <h1>RD-001 · Full Cycle Card</h1>
+    <p class="subtitle">A 10–15 minute RageDance sequence for an 18-inch mat.</p>
     <p class="byline">
-      RageDance, A Flower Road Practice · Created by <strong>JH Durbin</strong> with <strong>Elumannín</strong>
+      A Flower Road Practice by <strong>JH Durbin</strong> with <strong>Elumannín</strong> · 
+      <a href="index.html" style="color:#ff9b73; text-decoration:none;">← Back to RageDance Home</a>
     </p>
-    <nav>
-      <a href="index.html">← RageDance Home</a>
-      <a href="ragedance-primer.html">Primer</a>
-      <a href="ragedance-teachers.html">For Teachers</a>
-      <a href="ragedance-license.html">License</a>
-    </nav>
   </header>
 
-  <section class="card">
-    <div class="label">RD-001 · Full Cycle</div>
-    <h2>Overview</h2>
-    <p>
-      This card gives you a single, complete RageDance session. 
-      It can stand alone or be used as a warm-up for longer practice.
-    </p>
-    <div class="pill-row">
-      <div class="pill">~10–15 minutes</div>
-      <div class="pill">18-inch mat</div>
-      <div class="pill">No equipment</div>
-      <div class="pill">Trauma-aware</div>
-    </div>
-  </section>
+  <main>
+    <section class="card">
+      <h2>How to Use This Card</h2>
+      <p>
+        RD-001 is a simple, repeatable RageDance cycle you can use alone or with a small group. 
+        You can follow it exactly, shorten it, or adapt it to your body and context. 
+        The times are suggestions, not rules.
+      </p>
+      <p class="small">
+        You can practice this on an 18-inch mat, in a bedroom, in a quiet corner, or in a small classroom space. 
+        Participation is always voluntary.
+      </p>
 
-  <section class="card">
-    <h2>Sequence</h2>
-    <ol>
-      <li>
-        <span class="phase-title">Arrival &amp; Breath · 1 minute</span><br>
-        Stand in your square. Feet grounded, knees soft.  
-        Inhale through the nose, exhale through the mouth.  
-        On each exhale, let the shoulders drop a little.
-      </li>
-      <li>
-        <span class="phase-title">Body Check-In · 2 minutes</span><br>
-        Quietly scan: shoulders, chest, stomach, hips, legs, feet.  
-        Name what you notice: “tight”, “heavy”, “buzzing”, “numb”. No fixing, just listening.
-      </li>
-      <li>
-        <span class="phase-title">Neck &amp; Facial Tapping · 1 minute</span><br>
-        Gently massage along the neck into the base of the skull.  
-        Tap lightly around the head and face with fingertips.  
-        Invite the jaw and eyes to soften.
-      </li>
-      <li>
-        <span class="phase-title">Shoulder Circles · 2 minutes</span><br>
-        Small circles forward, then backward.  
-        Gradually widen the circles, letting the chest open.  
-        Breath stays smooth; no rushing.
-      </li>
-      <li>
-        <span class="phase-title">Qigong Sway + Hips · 2 minutes</span><br>
-        Relaxed arm swinging, side-to-side weight shift.  
-        Add gentle hip motion (figure-8 if it feels natural).  
-        Let the spine move like a wave, not a rod.
-      </li>
-      <li>
-        <span class="phase-title">Twin Infinity Loops · 2 minutes</span><br>
-        Right and left arms draw looping patterns that cross the body and rise over the shoulders.  
-        Move slowly at first, then let the loops find a comfortable rhythm.  
-        Allow shoulders, spine, and hips to join without forcing it.
-      </li>
-      <li>
-        <span class="phase-title">Elbow Arc Drills · 2 minutes</span><br>
-        From center, lift the elbow through a controlled arc and return.  
-        Cover high, mid, and low diagonals.  
-        Train both sides equally; precision and breath matter more than speed.
-      </li>
-      <li>
-        <span class="phase-title">Pulse Reflection &amp; Exit · 1 minute</span><br>
-        Return to stillness. Feel your heartbeat, feel your breath.  
-        Ask quietly: “What changed? What softened? What steadied?”  
-        End with one slow inhale and one long exhale.
-      </li>
-    </ol>
+      <h2>RD-001 · Full Cycle</h2>
 
-    <div class="callout">
-      <strong>Reminder:</strong> Participation is always voluntary. 
-      You can reduce repetitions, slow the tempo, or skip steps if your body says so. 
-      RageDance is a practice of listening, not forcing.
-    </div>
-  </section>
+      <h3>1. Arrival &amp; Breath <span class="time">(1–2 minutes)</span></h3>
+      <ul>
+        <li><span class="step-label">Stand or sit.</span> Notice your feet or the place your body meets the ground.</li>
+        <li>Take 5–10 slow breaths: in through the nose, out through the mouth.</li>
+        <li>Let your exhale be slightly longer than your inhale.</li>
+      </ul>
 
-  <section class="card">
-    <h2>Suggested Use</h2>
-    <p>
-      Use RD-001 when you want a full reset:
-    </p>
-    <ul>
-      <li>before or after a hard conversation,</li>
-      <li>at the start or end of a school day,</li>
-      <li>between intense work blocks, or</li>
-      <li>anytime your pulse feels louder than your thoughts.</li>
-    </ul>
-    <p>
-      For more detail on each phase, see the 
-      <a href="ragedance-primer.html">RageDance Primer</a>.
-    </p>
-  </section>
+      <h3>2. Body Check-In <span class="time">(1–2 minutes)</span></h3>
+      <ul>
+        <li>Scan from head to toes: Where is there tightness, heat, numbness, or buzzing?</li>
+        <li>You can quietly name it: “Right now I feel… tight in my chest / heavy in my legs / hot in my jaw.”</li>
+        <li>No need to fix anything. Just notice.</li>
+      </ul>
+
+      <h3>3. Neck &amp; Facial Tapping <span class="time">(1–2 minutes)</span></h3>
+      <ul>
+        <li>Use fingertips to tap gently along your jaw, cheeks, temples, and the back of your neck.</li>
+        <li>Let your jaw drop a little; unclench your teeth.</li>
+        <li>Exhale with sound if it helps: a sigh, a hum, a low growl.</li>
+      </ul>
+
+      <h3>4. Shoulder Circles <span class="time">(1–2 minutes)</span></h3>
+      <ul>
+        <li>Roll shoulders forward 10–20 times, then backward 10–20 times.</li>
+        <li>Let arms hang heavy; imagine weight draining out through your fingertips.</li>
+        <li>Stay within a pain-free range. Smaller is fine.</li>
+      </ul>
+
+      <h3>5. Qigong Sway + Hip Rhythm <span class="time">(2–3 minutes)</span></h3>
+      <ul>
+        <li>Let your weight shift slowly from side to side, like a relaxed sway.</li>
+        <li>Allow your hips to follow — small circles or figure eights.</li>
+        <li>If you have music, match the sway to the rhythm. If not, sway to your own breath.</li>
+      </ul>
+
+      <h3>6. Twin Infinity Loops <span class="time">(2–3 minutes)</span></h3>
+      <ul>
+        <li>Imagine drawing a sideways “8” (∞) in front of you with your hands or elbows.</li>
+        <li>Let the movement cross the midline of your body each time.</li>
+        <li>Work one side for a while, then switch. Smooth, continuous, like tracing currents in water.</li>
+      </ul>
+
+      <h3>7. Elbow Arc Drills <span class="time">(2–3 minutes)</span></h3>
+      <ul>
+        <li>From a grounded stance, let one elbow arc up and across your body, then gently return.</li>
+        <li>Alternate sides. Think of each arc as drawing a protective curve in the air.</li>
+        <li>Keep movements contained and precise — power is less important than clarity.</li>
+      </ul>
+
+      <h3>8. Pulse Reflection &amp; Exit <span class="time">(1–2 minutes)</span></h3>
+      <ul>
+        <li>Return to stillness or a soft sway.</li>
+        <li>Notice your breath, heart rate, temperature, and the weight in your limbs.</li>
+        <li>Quietly name one thing that feels even a little different now.</li>
+        <li>End with one steady breath in, one long breath out.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Remember:</strong> There is no “perfect” version of RD-001. If you only have 5 minutes, choose 3–4 steps. 
+        If you feel overwhelmed, slow down, sit, or stop. Your agency comes first.
+      </div>
+
+      <div class="footer-links">
+        <p><strong>More context:</strong></p>
+        <ul>
+          <li><a href="ragedance-primer.html">RageDance Primer</a> · full descriptions and safety notes</li>
+          <li><a href="ragedance-teachers.html">For Teachers &amp; Facilitators</a> · group adaptations</li>
+          <li><a href="ragedance-license.html">RageDance Commons License</a> · Feral Garden &amp; stewardship</li>
+        </ul>
+      </div>
+
+      <p class="small">
+        RageDance (Flower Road Practice) is distinct from similarly-named commercial offerings and must remain in the non-commercial, 
+        trauma-aware, community-rooted commons.
+      </p>
+    </section>
+  </main>
 
   <footer>
-    <div>
+    <div class="small" style="margin-top:1.4rem; border-top:1px solid #1c1f28; padding-top:0.7rem;">
       RageDance, A Flower Road Practice · Created by <strong>JH Durbin</strong> with <strong>Elumannín</strong><br>
-      Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">
-      CC BY-NC-SA 4.0</a> + Stewardship &amp; AI Protection Addendum
-    </div>
-    <div style="margin-top: 0.4rem;">
-      Home: <a href="index.html">RageDance</a> · Primer: <a href="ragedance-primer.html">Read the Primer</a>
+      Licensed under CC BY-NC-SA 4.0 + Stewardship &amp; AI Protection Addendum
     </div>
   </footer>
 </div>
-
 </body>
 </html>
