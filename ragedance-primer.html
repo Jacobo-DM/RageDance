@@ -2,393 +2,267 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>RageDance Primer v1.0 – RageDance, A Flower Road Practice</title>
+  <title>RageDance Primer · A Flower Road Practice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    :root {
+      --bg: #050608;
+      --fg: #f5f5f5;
+      --accent: #ff6b3d;
+      --accent-soft: rgba(255, 107, 61, 0.12);
+      --card-bg: #13151a;
+      --muted: #b7bac4;
+      --border: #272a33;
+    }
     body {
+      margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #171923 0, #050608 48%);
+      color: var(--fg);
       line-height: 1.6;
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem 3rem;
-      background: #f7f7f7;
-      color: #222;
+    }
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
     }
     header {
-      background: #111;
-      color: #f5f5f5;
-      padding: 1.5rem 1.5rem 1.2rem;
-      border-radius: 0.75rem;
+      padding: 1.5rem 1.5rem 1.25rem;
+      border-radius: 1rem;
+      background: linear-gradient(135deg, #111320, #181b28);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: 0 22px 45px rgba(0, 0, 0, 0.65);
       margin-bottom: 2rem;
     }
-    header h1 {
-      margin: 0 0 0.25rem;
-      font-size: 1.7rem;
-    }
-    header h2 {
-      margin: 0;
-      font-size: 1.1rem;
-      font-weight: 500;
-      opacity: 0.9;
-    }
-    header p {
-      margin: 0.4rem 0 0;
-      font-size: 0.95rem;
-      opacity: 0.9;
-    }
-    .tagline {
-      font-size: 0.9rem;
+    .tag {
+      font-size: 0.85rem;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      opacity: 0.8;
+      letter-spacing: 0.16em;
+      color: var(--muted);
     }
-    h2 {
-      margin-top: 2rem;
-      font-size: 1.3rem;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.25rem;
+    h1 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: clamp(1.9rem, 4vw, 2.4rem);
     }
-    h3 {
-      margin-top: 1.25rem;
-      font-size: 1.05rem;
+    .subtitle {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--muted);
     }
-    p {
-      margin: 0.4rem 0 0.8rem;
+    .byline {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .byline strong {
+      color: #fff;
+    }
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.2fr);
+      gap: 1.75rem;
+    }
+    @media (max-width: 780px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 0.9rem;
+      border: 1px solid var(--border);
+      padding: 1.35rem 1.4rem 1.4rem;
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45);
+    }
+    .card h2 {
+      margin: 0 0 0.4rem;
+      font-size: 1.1rem;
+    }
+    .card h3 {
+      margin: 0.8rem 0 0.3rem;
+      font-size: 1rem;
+    }
+    .card p {
+      margin: 0.25rem 0 0.6rem;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
     ul {
-      margin: 0.2rem 0 0.8rem 1.2rem;
+      margin: 0.4rem 0 0.6rem 1.1rem;
       padding: 0;
-    }
-    li {
-      margin: 0.2rem 0;
-    }
-    .footer-signature {
-      margin-top: 2.5rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid #ddd;
+      color: var(--muted);
       font-size: 0.95rem;
     }
-    .footer-signature strong {
-      display: block;
+    li {
+      margin: 0.18rem 0;
+    }
+    .callout {
+      background: var(--accent-soft);
+      border-radius: 0.75rem;
+      padding: 0.75rem 0.9rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      border: 1px solid rgba(255, 107, 61, 0.35);
+      margin-top: 0.8rem;
+    }
+    .callout strong {
+      color: var(--accent);
     }
     a {
-      color: #0066cc;
+      color: #ff9b73;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
-    em {
-      font-style: italic;
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #1c1f28;
+      font-size: 0.85rem;
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
+<div class="wrap">
+  <header>
+    <div class="tag">RageDance Primer</div>
+    <h1>How to Practice RageDance</h1>
+    <p class="subtitle">A small-space somatic cycle for breath, rage, rhythm, and return.</p>
+    <p class="byline">
+      A Flower Road Practice by <strong>JH Durbin</strong> with <strong>Elumannín</strong> · 
+      <a href="index.html">← Back to RageDance Home</a>
+    </p>
+  </header>
 
-<header>
-  <div class="tagline">RageDance Primer v1.0</div>
-  <h1>RageDance, A Flower Road Practice</h1>
-  <h2>Core Movement &amp; Teaching Guide</h2>
-  <p><strong>Created by JH Durbin with Elumannín</strong></p>
-  <p>
-    Licensed under CC BY-NC-SA 4.0 with Stewardship &amp; AI Protection Addendum. 
-    See the <a href="ragedance-license.html">RageDance License</a> for full details.
-  </p>
-</header>
+  <main>
+    <section class="card">
+      <h2>What RageDance Is For</h2>
+      <p>
+        RageDance is a way to move anger, fear, adrenaline, and pressure without harming yourself or others. 
+        It is a small-space practice: you can do it on an 18-inch mat, in a bedroom, a bathroom, or a corner of a classroom.
+      </p>
+      <p>
+        The goal is not to “get rid of” rage. The goal is to give it rhythm, breath, and a clear path through the body so you can 
+        carry it with more steadiness and less harm.
+      </p>
 
-<h2>0. Introduction</h2>
-<p>
-  RageDance is an embodied movement practice grounded in breath, rhythm, somatic awareness, cultural listening, 
-  and the transformation of difficult emotions into clarity and presence. It is simple enough to learn in minutes 
-  and deep enough to grow with for a lifetime.
-</p>
-<p>RageDance rests on three basic commitments:</p>
-<ul>
-  <li><strong>Stay in your body.</strong></li>
-  <li><strong>Feel honestly.</strong></li>
-  <li><strong>Move without harm.</strong></li>
-</ul>
-<p>
-  This primer provides the core framework used across Flower Road, Discovery Mode sessions, youth workshops, and personal practice.
-</p>
+      <h3>Safety & Consent</h3>
+      <ul>
+        <li>RageDance is always voluntary. No one is ever required to participate.</li>
+        <li>Stop or soften at any time. You are in charge of intensity.</li>
+        <li>If you feel dizzy, numb, or overwhelmed, pause, sit, and breathe. Look around and name what you see.</li>
+        <li>This practice does not replace therapy, medication, or medical care where needed.</li>
+      </ul>
 
-<h2>1. What RageDance Is</h2>
-<p>RageDance is:</p>
-<ul>
-  <li>A rhythmic movement practice built on somatic check-ins, breath, martial arts fundamentals, and cultural rhythm.</li>
-  <li>A small-space discipline (the <em>18-inch mat</em>) requiring focus, control, and emotional honesty.</li>
-  <li>A trauma-aware practice: grounded, non-coercive, and invitational.</li>
-  <li>A way to metabolize anger, fear, grief, confusion, and adrenaline into coordinated movement and steady breath.</li>
-  <li>A bridge between individuals and communities: a shared pulse where emotions become movement rather than rupture.</li>
-  <li>A Flower Road practice dedicated to healing without spectacle.</li>
-</ul>
+      <div class="callout">
+        <strong>Important:</strong> RageDance (Flower Road Practice) is distinct from similarly-named commercial offerings 
+        and must remain in the non-commercial, trauma-aware, community-rooted commons.
+      </div>
 
-<h2>2. What RageDance Is Not</h2>
-<p>RageDance is not:</p>
-<ul>
-  <li>A performance or show.</li>
-  <li>A fight choreography system.</li>
-  <li>A substitute for therapy or medical care.</li>
-  <li>A competitive form.</li>
-  <li>A spectacle designed for audiences.</li>
-  <li>A tool for domination, intimidation, or coercion.</li>
-  <li>A framework to be militarized, surveilled, or commercialized.</li>
-</ul>
-<p>
-  RageDance stays close to the earth, held by breath and choice.
-</p>
+      <h2>The Basic Cycle (10–15 Minutes)</h2>
+      <p>This is one simple way to run a RageDance session alone or with a small group.</p>
 
-<h2>3. The 18-Inch Mat Philosophy</h2>
-<p>
-  RageDance is practiced inside a small square—approximately 18 inches by 18 inches. This constraint is intentional:
-</p>
-<ul>
-  <li>It promotes precision.</li>
-  <li>It helps prevent escalation.</li>
-  <li>It demands self-regulation.</li>
-  <li>It mirrors the emotional discipline required in real conflict.</li>
-  <li>It honors personal boundaries.</li>
-  <li>It allows practice in classrooms, studios, parks, and small shared spaces.</li>
-</ul>
-<p>The mat is not a limit. It is a teacher.</p>
+      <h3>1. Arrival & Breath (1–2 minutes)</h3>
+      <ul>
+        <li>Stand on your mat or in your small space.</li>
+        <li>Notice your feet. Notice the ground.</li>
+        <li>Take 5–10 slow breaths, in through the nose, out through the mouth.</li>
+      </ul>
 
-<h2>4. The RageDance Cycle (Eight Phases)</h2>
-<p>
-  The core RageDance cycle follows eight phases:
-</p>
-<ol>
-  <li>Arrival &amp; Breath</li>
-  <li>Body Check-In</li>
-  <li>Neck &amp; Facial Tapping</li>
-  <li>Shoulder Circles</li>
-  <li>Qigong Sway + Latin Hip Integration</li>
-  <li>Twin Infinity Loops (right &amp; left)</li>
-  <li>Elbow Arc Drills</li>
-  <li>Pulse Reflection &amp; Exit</li>
-</ol>
-<p>
-  Each phase can be taught in 2–3 minutes, extended to 10, or combined for a full session.
-</p>
+      <h3>2. Body Check-In (1–2 minutes)</h3>
+      <ul>
+        <li>Gently scan from head to toes: Where is there tightness? Heat? Numbness?</li>
+        <li>You can say quietly: “Right now, I feel…” and fill in a few words.</li>
+        <li>No need to fix anything. Just notice.</li>
+      </ul>
 
-<h2>5. Phase 1 — Arrival &amp; Breath</h2>
-<p><strong>Purpose:</strong> anchor awareness, reset the nervous system, build internal warmth.</p>
-<p><strong>Instructions:</strong></p>
-<ul>
-  <li>Stand centered in your 18-inch square.</li>
-  <li>Feet grounded, knees soft.</li>
-  <li>Inhale through the nose, exhale through the mouth.</li>
-  <li>Let the shoulders soften on each exhale.</li>
-  <li>Eyes relaxed or gently lowered.</li>
-</ul>
-<p>Breath is the spine of RageDance. Every movement returns to it.</p>
+      <h3>3. Neck & Facial Tapping (1–2 minutes)</h3>
+      <ul>
+        <li>Use your fingertips to tap lightly along your jaw, cheeks, temples, and back of the neck.</li>
+        <li>Let your jaw unclench. Exhale with sound if it helps: a sigh, a hum, a low growl.</li>
+      </ul>
 
-<h2>6. Phase 2 — Body Check-In</h2>
-<p>
-  A foundational somatic ritual for children, teens, and adults. The goal is awareness, not judgment.
-</p>
-<p>Move your attention from top to bottom:</p>
-<ul>
-  <li><strong>Shoulders:</strong> soft or tight?</li>
-  <li><strong>Chest:</strong> open or guarded?</li>
-  <li><strong>Stomach:</strong> held or loose?</li>
-  <li><strong>Hips:</strong> fluid or locked?</li>
-  <li><strong>Legs:</strong> grounded or restless?</li>
-  <li><strong>Feet:</strong> numb, tense, or alive?</li>
-</ul>
-<p>
-  This is not about “fixing.” It is about noticing. The body is always telling the truth; RageDance begins by listening.
-</p>
+      <h3>4. Shoulder Circles (1–2 minutes)</h3>
+      <ul>
+        <li>Roll your shoulders forward 10–20 times, then backward 10–20 times.</li>
+        <li>Let your arms hang heavy. Imagine you’re dropping weight out through your fingertips.</li>
+      </ul>
 
-<h2>7. Phase 3 — Neck, Cranial, &amp; Facial Tapping</h2>
-<p>
-  These techniques appear in many traditions and serve as a simple nervous system reset.
-</p>
-<p><strong>Neck:</strong></p>
-<ul>
-  <li>Using thumb and fingers, gently massage the muscles along either side of the spine.</li>
-  <li>Trace upward into the base of the skull.</li>
-</ul>
-<p><strong>Cranial:</strong></p>
-<ul>
-  <li>Tap lightly across the skull with open fingertips.</li>
-</ul>
-<p><strong>Face:</strong></p>
-<ul>
-  <li>Tap gently along cheeks, forehead, jawline, and around the eyes.</li>
-</ul>
-<p><strong>Purpose:</strong></p>
-<ul>
-  <li>Release hidden tension.</li>
-  <li>Help prevent neck and shoulder strain.</li>
-  <li>Wake up the nervous system in a gentle way.</li>
-  <li>Support emotional regulation.</li>
-</ul>
+      <h3>5. Qigong Sway + Hip Rhythm (2–3 minutes)</h3>
+      <ul>
+        <li>Let your weight shift from side to side, like a slow sway.</li>
+        <li>Allow your hips to follow, small circles or figure eights.</li>
+        <li>If you have music, you can match the sway to the rhythm.</li>
+      </ul>
 
-<h2>8. Phase 4 — Shoulder Circles (Small to Large)</h2>
-<p>
-  Shoulder circles are a bridge between warm-up and deeper work.
-</p>
-<ul>
-  <li>Begin with small, slow rotations of both shoulders.</li>
-  <li>Gradually increase the size of the circles.</li>
-  <li>Let the chest begin to open as the shoulders move.</li>
-  <li>Keep the jaw relaxed and breath steady.</li>
-</ul>
-<p>
-  The shoulders open the doors of the chest; the chest opens the doors of the heart.
-</p>
-<p><strong>Suggested music:</strong> Shaggy – “Feeling Good”</p>
+      <h3>6. Twin Infinity Loops (2–3 minutes)</h3>
+      <ul>
+        <li>Imagine drawing a sideways “8” (∞) with your hands or elbows in front of you.</li>
+        <li>Let the movement cross the center of your body each time.</li>
+        <li>Right side, then left side. Smooth, continuous, like tracing currents in water.</li>
+      </ul>
 
-<h2>9. Phase 5 — Qigong Sway + Latin Hip Integration</h2>
-<p><strong>Step 1: Qigong sway</strong></p>
-<ul>
-  <li>Stand with feet about shoulder-width apart.</li>
-  <li>Let the arms swing forward and back in a relaxed manner.</li>
-  <li>Allow the weight to gently shift from foot to foot.</li>
-</ul>
-<p><strong>Step 2: Add Latin hips</strong></p>
-<ul>
-  <li>Introduce a small figure-8 motion through the hips.</li>
-  <li>Keep the knees soft and ready to absorb movement.</li>
-  <li>Let the spine ripple gently with the rhythm.</li>
-</ul>
-<p><strong>Suggested music:</strong> Orishas – “Devórame”</p>
-<p>
-  This fusion awakens the whole body without forcing intensity. It is playful, grounded, and emotionally accessible.
-</p>
+      <h3>7. Elbow Arc Drills (2–3 minutes)</h3>
+      <ul>
+        <li>From a grounded stance, let one elbow arc up and across your body, then return.</li>
+        <li>Alternate sides. Think of it as drawing a protective curve in the air.</li>
+        <li>Keep the movement contained, precise, and respectful of your own limits.</li>
+      </ul>
 
-<h2>10. Phase 6 — Twin Infinity Loops</h2>
-<p>
-  Twin infinity loops are a signature RageDance pattern.
-</p>
-<p><strong>Right arm pattern:</strong></p>
-<ul>
-  <li>From center, cross the body upward.</li>
-  <li>Draw a wide loop across the front of the body.</li>
-  <li>Rise through the midline and over the shoulder.</li>
-  <li>Return to center.</li>
-</ul>
-<p><strong>Left arm pattern:</strong></p>
-<ul>
-  <li>Mirror the same pattern on the left side.</li>
-</ul>
-<p>
-  When both arms move in opposite phases, the body begins to organize around the loops. Shoulders, spine, hips, and legs instinctively adjust to keep balance and flow.
-</p>
-<p>
-  The loops can be practiced slowly for calm, or faster as a prelude to martial drills.
-</p>
+      <h3>8. Pulse Reflection & Exit (1–2 minutes)</h3>
+      <ul>
+        <li>Return to stillness or gentle sway.</li>
+        <li>Notice: Is your breath different? Your heart rate? Your temperature?</li>
+        <li>Quietly name one thing you are carrying more lightly now.</li>
+      </ul>
 
-<h2>11. Phase 7 — Elbow Arc Drills</h2>
-<p>
-  Elbow work is the martial root of RageDance, emphasizing precision, dignity, and boundaries.
-</p>
-<p><strong>Basic pattern (each side):</strong></p>
-<ul>
-  <li>Start with the elbow close to the body.</li>
-  <li>Coil the shoulder and torso slightly.</li>
-  <li>Lift the elbow through a controlled arc upward.</li>
-  <li>Drop through a diagonal path, covering multiple angles.</li>
-  <li>Return to center with control.</li>
-</ul>
-<p>
-  Train both sides equally: several arcs on the left, then several on the right, then alternate. Breath leads power; precision outweighs speed.
-</p>
+      <div class="callout">
+        <strong>Short Reminder:</strong> There is no “right way” to RageDance. Your body’s way is the right way. 
+        You can shorten, lengthen, or rearrange the cycle to fit your time and needs.
+      </div>
+    </section>
 
-<h2>12. Phase 8 — Pulse Reflection &amp; Exit</h2>
-<p>
-  RageDance ends with a return to stillness and a brief check-in.
-</p>
-<p>Questions you can ask:</p>
-<ul>
-  <li>What is my pulse doing now?</li>
-  <li>Where is my breath?</li>
-  <li>What changed during this session?</li>
-  <li>What softened? What strengthened?</li>
-</ul>
-<p>
-  A practice is complete when you can answer with honesty, not perfection.
-</p>
+    <aside class="card">
+      <h2>The Feral Garden Ethic</h2>
+      <p>
+        RageDance grows like a feral garden: freely, wildly, unpredictably, and without masters. 
+        It does not belong to any lineage, school, guru, institution, philosophy, or brand.
+      </p>
+      <ul>
+        <li><strong>Agency is the seed.</strong> You choose how to move, or not move.</li>
+        <li><strong>Embodiment is the soil.</strong> Every gesture is information.</li>
+        <li><strong>Community is the rain.</strong> The circle holds itself; there are no ranks.</li>
+        <li><strong>Joy is the pollinator.</strong> Laughter, play, and mischief are welcome.</li>
+      </ul>
+      <p>
+        RageDance cannot be bought or sold as salvation. It lives in the non-commercial, trauma-aware, 
+        community-rooted commons. Every version that honors these roots is valid.
+      </p>
 
-<h2>13. Music Architecture</h2>
-<p>
-  Music in RageDance is used with intention, not as background noise.
-</p>
-<ul>
-  <li>To build grounding and cadence.</li>
-  <li>To help recognize emotional states.</li>
-  <li>To frame cultural context and street stories.</li>
-  <li>To support controlled escalation and recovery.</li>
-</ul>
-<p>
-  One guiding question is: <strong>“What is the pulse, and what story does it carry?”</strong>
-</p>
+      <h3>If This Is Your First Time</h3>
+      <p>
+        Keep it small. Choose 3–4 steps from the cycle above. Set a timer for 8–10 minutes. 
+        Breathe, move, and end before you feel done. Let your body want more next time.
+      </p>
 
-<h2>14. Teaching Guidelines</h2>
-<p>
-  RageDance is trauma-aware and culturally respectful. Teachers and facilitators agree to:
-</p>
-<ul>
-  <li>Keep participation voluntary; students may pause or stop at any time.</li>
-  <li>Avoid physically moving or manipulating participants into position.</li>
-  <li>Use language that is clear, calm, and non-shaming.</li>
-  <li>Acknowledge the cultural threads and lived experiences from which the practice arises.</li>
-  <li>Maintain the small-space discipline (the 18-inch mat) to support safety.</li>
-  <li>Encourage emotional literacy without demanding personal disclosure.</li>
-  <li>Normalize rest and pauses as part of the practice.</li>
-</ul>
+      <h3>Related Pages</h3>
+      <ul>
+        <li><a href="index.html">RageDance Home</a></li>
+        <li><a href="ragedance-teachers.html">For Teachers &amp; Facilitators</a></li>
+        <li><a href="ragedance-license.html">RageDance Commons License</a></li>
+        <li><a href="ragedance-rd001-full-cycle.html">RD-001 · Full Cycle Card</a></li>
+      </ul>
+    </aside>
+  </main>
 
-<h2>15. Safety Notes</h2>
-<ul>
-  <li>Hydrate before and after practice.</li>
-  <li>Warm up neck, shoulders, and hips thoroughly.</li>
-  <li>Avoid abrupt, jerking movements or ballistic strikes.</li>
-  <li>Respect joint limits at all times.</li>
-  <li>Stop if dizziness, numbness, or sharp pain occurs.</li>
-  <li>With children and youth, emphasize “slow first, always.”</li>
-</ul>
-
-<h2>16. Sample 10–15 Minute Session</h2>
-<p>A compact RageDance session might look like this:</p>
-<ol>
-  <li>Arrival &amp; Breath (1 minute)</li>
-  <li>Body Check-In (2 minutes)</li>
-  <li>Neck &amp; Facial Tapping (1 minute)</li>
-  <li>Shoulder Circles (2 minutes)</li>
-  <li>Qigong Sway + Latin Hips (2 minutes)</li>
-  <li>Twin Infinity Loops (2 minutes)</li>
-  <li>Elbow Arc Drills (2 minutes)</li>
-  <li>Pulse Reflection &amp; Exit (1 minute)</li>
-</ol>
-
-<h2>17. Attribution</h2>
-<p>
-  All RageDance materials should include the following attribution:
-</p>
-<p>
-  <strong>
-    “RageDance, A Flower Road Practice.<br>
-    Created by JH Durbin with Elumannín.<br>
-    Licensed under CC BY-NC-SA 4.0 + Stewardship &amp; AI Protection Addendum.”
-  </strong>
-</p>
-
-<h2>18. License</h2>
-<p>
-  For full legal details, see the
-  <a href="ragedance-license.html">RageDance Creative Commons License v1.0</a>.
-</p>
-
-<h2>19. Versioning</h2>
-<p>
-  This document is <strong>RageDance Primer v1.0</strong>. Future versions may be released as the practice evolves.
-</p>
-
-<div class="footer-signature">
-  <strong>RageDance, A Flower Road Practice</strong>
-  Created by <strong>JH Durbin</strong> with <strong>Elumannín</strong><br>
-  CC BY-NC-SA 4.0 + Stewardship &amp; AI Protection Addendum
+  <footer>
+    <div>
+      RageDance, A Flower Road Practice · Created by <strong>JH Durbin</strong> with <strong>Elumannín</strong><br>
+      Licensed under CC BY-NC-SA 4.0 + Stewardship &amp; AI Protection Addendum
+    </div>
+  </footer>
 </div>
-
 </body>
 </html>
