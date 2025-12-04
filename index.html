@@ -57,6 +57,27 @@
     .byline strong {
       color: #fff;
     }
+    /* NEW: top navigation */
+    nav {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(0, 0, 0, 0.28);
+    }
+    nav a:hover,
+    nav a:focus {
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+    }
     .pill-row {
       display: flex;
       flex-wrap: wrap;
@@ -200,6 +221,16 @@
       Created by <strong>JH Durbin</strong> with <strong>Elumannín</strong> · 
       Licensed under <strong>CC BY-NC-SA 4.0</strong> + Stewardship &amp; AI Protection Addendum
     </p>
+
+    <!-- NEW: top navigation -->
+    <nav aria-label="RageDance site navigation">
+      <a href="declaration.html">Declaration</a>
+      <a href="warmups.html">Warm-Ups</a>
+      <a href="ragedance-primer.html">Primer</a>
+      <a href="ragedance-teachers.html">For Teachers</a>
+      <a href="ragedance-license.html">License</a>
+    </nav>
+
     <div class="pill-row">
       <div class="pill">Somatic practice</div>
       <div class="pill">18-inch mat discipline</div>
@@ -243,6 +274,16 @@
         <a class="btn btn-primary" href="ragedance-primer.html">
           <span class="icon">🔥</span>
           Read the RageDance Primer
+        </a>
+
+        <a class="btn btn-ghost" href="declaration.html">
+          <span class="icon">📜</span>
+          Read the Declaration
+        </a>
+
+        <a class="btn btn-ghost" href="warmups.html">
+          <span class="icon">🌡️</span>
+          Explore Warm-Ups
         </a>
 
         <a class="btn btn-ghost" href="ragedance-license.html">
@@ -338,7 +379,8 @@
       + Stewardship &amp; AI Protection Addendum
     </div>
     <div style="margin-top: 0.4rem;">
-      Start with the <a href="ragedance-primer.html">Primer</a>, then share carefully with those who are ready.
+      Start with the <a href="ragedance-primer.html">Primer</a>, read the <a href="declaration.html">Declaration</a>, 
+      and explore <a href="warmups.html">Warm-Ups</a> before sharing with others.
     </div>
   </footer>
 </div>
