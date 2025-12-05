@@ -10,7 +10,7 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
       padding: 0;
-      background: #050505; 
+      background: #050505;
       color: #f4f4f4;
       line-height: 1.6;
     }
@@ -32,7 +32,7 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 960px;
       margin: 2rem auto;
       padding: 0 1.5rem 3rem;
     }
@@ -42,21 +42,42 @@
     }
 
     .tagline {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       opacity: 0.9;
       margin-bottom: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 800px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     .card {
       border: 1px solid #333;
       border-radius: 0.75rem;
       padding: 1.25rem;
-      margin-bottom: 1.25rem;
       background: #101010;
+      height: 100%;
+    }
+
+    .card h2 {
+      margin-top: 0;
     }
 
     ul {
       padding-left: 1.2rem;
+      margin: 0.25rem 0 0.25rem;
+    }
+
+    .small {
+      font-size: 0.9rem;
+      opacity: 0.85;
     }
   </style>
 </head>
@@ -65,12 +86,14 @@
   <header>
     <nav>
       <a href="index.html">Home</a>
+      <a href="ragedance-primer.html">Primer</a>
+      <a href="ragedance-rd001-full-cycle.html">Full Cycle</a>
+      <a href="ragedance-teachers.html">Teachers</a>
+      <a href="warmups.html">Warm-ups</a>
+      <a href="ragedance-license.html">License</a>
       <a href="lineage.html">Lineage</a>
       <a href="ethics.html">Ethics</a>
       <a href="glossary.html">Glossary</a>
-      <a href="warmups/warmup1.html">Warm-ups</a>
-      <a href="field_practices/fp1.html">Field Practices</a>
-      <a href="patterns/infinity_elbow.html">Patterns</a>
     </nav>
   </header>
 
@@ -79,47 +102,59 @@
 
     <p class="tagline">
       A practice of movement and presence for staying human under pressure.
+      It arose in places where the body learns to tighten under stress – when breath,
+      vision, and movement shrink. RageDance teaches ways to unfold again without force.
     </p>
 
-    <section class="card">
-      <h2>What is RageDance?</h2>
-      <p>
-        RageDance is a practice developed through lived experience: street-level danger,
-        internal compression, and the long work of recalibrating presence. It is not
-        derived from any single tradition, nor does it replace existing arts.
-      </p>
-      <p>
-        RageDance centers:
-      </p>
-      <ul>
-        <li>Pulse awareness — the body’s internal rhythm in motion and stillness.</li>
-        <li>Movement that restores presence instead of escalating threat.</li>
-        <li>Boundaries that protect without dominating.</li>
-        <li>The return to the circle after rupture.</li>
-      </ul>
-    </section>
+    <section class="grid">
+      <article class="card">
+        <h2>Core Documents</h2>
+        <p class="small">Start here if you want the spine of the practice.</p>
+        <ul>
+          <li><a href="declaration.html">RageDance Declaration</a></li>
+          <li><a href="ragedance-primer.html">RageDance Primer</a></li>
+          <li><a href="ragedance-rd001-full-cycle.html">RD001: Full Cycle</a></li>
+          <li><a href="ragedance-teachers.html">Notes for Teachers</a></li>
+          <li><a href="ragedance-license.html">RageDance License &amp; Sharing Guidelines</a></li>
+        </ul>
+      </article>
 
-    <section class="card">
-      <h2>Start Here</h2>
-      <ul>
-        <li><a href="lineage.html">Read the RageDance Lineage</a></li>
-        <li><a href="ethics.html">Explore the Ethics of Practice</a></li>
-        <li><a href="warmups/warmup1.html">Warm-up 1: Breath &amp; Pulse</a></li>
-        <li><a href="patterns/infinity_elbow.html">Pattern: Infinity Elbow Circles</a></li>
-      </ul>
-    </section>
+      <article class="card">
+        <h2>Practice Library</h2>
+        <p class="small">Movement, breath, and patterns.</p>
+        <ul>
+          <li><a href="warmups.html">Warm-ups Overview</a></li>
+          <li><a href="warmups/warmup1.html">Warm-up 1: Breath &amp; Pulse (stub)</a></li>
+          <li><a href="field_practices/fp1.html">Field Practice 1: Pulse Awareness (stub)</a></li>
+          <li><a href="patterns/infinity_elbow.html">Pattern: Infinity Elbow Circles (stub)</a></li>
+        </ul>
+        <p class="small">
+          “Stub” pages are placeholders; the full descriptions will grow over time.
+        </p>
+      </article>
 
-    <section class="card">
-      <h2>What RageDance Is Not</h2>
-      <ul>
-        <li>Not a performance system.</li>
-        <li>Not a method for intimidation or posturing.</li>
-        <li>Not a path for accumulating followers or power.</li>
-      </ul>
-      <p>
-        Any use of RageDance to elevate the self, impress others, or undermine the safety
-        of the circle breaks the lineage.
-      </p>
+      <article class="card">
+        <h2>Lineage &amp; Ethics</h2>
+        <p class="small">Why RageDance exists and what keeps it clean.</p>
+        <ul>
+          <li><a href="lineage.html">RageDance Lineage</a></li>
+          <li><a href="ethics.html">Ethics of Practice</a></li>
+          <li><a href="glossary.html">Glossary of Terms</a></li>
+          <li><a href="Borderlands/shared-principles.html">Borderlands: Shared Principles</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>For Teachers &amp; Circles</h2>
+        <p class="small">
+          Resources for those holding space with RageDance inside classrooms,
+          communities, or small circles.
+        </p>
+        <ul>
+          <li><a href="ragedance-teachers.html">Teachers’ Notes</a></li>
+          <li><a href="modules/README.md">Modules &amp; Experiments (raw notes)</a></li>
+        </ul>
+      </article>
     </section>
   </main>
 </body>
