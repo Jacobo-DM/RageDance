@@ -43,4 +43,9 @@ Variations
 Slow Arc: breath-synchronized, deep stretch
 Pulse Arc: medium tempo, used to restore rhythm
 Wind Arc: quick, short arc for rapid release without force
-If you like this, you can paste it directly into the RageDance repo under:
+Balance Notes
+Skyward Arc is always practiced on both sides unless there is pain,
+injury, or need for rest. Each upward arc should be paired with a
+downward or grounding movement to restore neutrality and prevent
+overextension. Balance keeps the pulse clear.
+
