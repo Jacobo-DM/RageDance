@@ -37,6 +37,14 @@ No movement is ever used to elevate oneself above another.
 Every practitioner has their own rhythm, breath cycle,
 and wave of emotional intensity.
 RageDance helps them hear it, not override it.
+### ⭐ 11. Both sides, always (unless injured).
+RageDance movements are practiced on both sides of the body to maintain balance,
+clarity, and nervous-system symmetry. Exceptions are made for pain, injury,
+or fatigue. The intention is not perfection, but wholeness.
+### ⭐ 12. Upward movements are balanced with downward movements.
+Every rise has a corresponding fall, every expansion has a grounding.
+Balancing Skyward and Earthward motions prevents strain and allows the body to
+explore fluidity rather than force. RageDance follows the wave, not the line.
 Closing
 These principles guide every movement, every stance,
 every card, every warmup, every moment on the mat.
