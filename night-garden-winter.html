@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RageDance · Night Garden Sequence (Winter)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RageDance Night Garden Sequence (Winter): a grounding kata for cold evenings, fluid movement, and pulse-wave resonance.">
+  <style>
+    :root {
+      --bg: #05070b;
+      --bg-soft: #0c1118;
+      --card-bg: #111827;
+      --card-soft: #161f2e;
+      --accent: #fbbf24;
+      --accent-soft: #fde68a;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2933;
+      --danger: #fca5a5;
+      --safe: #6ee7b7;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-serif: "Georgia", "Times New Roman", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      color: var(--text);
+      font-family: var(--font-main);
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3.5rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.04em;
+      margin: 0 0 0.5rem;
+      text-transform: uppercase;
+    }
+
+    header p {
+      margin: 0.25rem 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.15rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .pill span.dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    h2 {
+      margin-top: 2.25rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.35rem;
+      font-size: 1.05rem;
+    }
+
+    p {
+      margin: 0.4rem 0;
+    }
+
+    ul {
+      margin: 0.3rem 0 0.75rem 1.1rem;
+      padding: 0;
+    }
+
+    li {
+      margin: 0.2rem 0;
+    }
+
+    .card {
+      background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(15,23,42,0.9));
+      border-radius: 0.9rem;
+      border: 1px solid var(--border);
+      padding: 1rem 1.1rem;
+      margin: 1rem 0 1.3rem;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.65);
+    }
+
+    .card.soft {
+      background: rgba(15,23,42,0.85);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .tag.power {
+      border-color: var(--accent);
+      color: var(--accent-soft);
+    }
+
+    .tag.caution-tag {
+      border-color: var(--danger);
+      color: var(--danger);
+    }
+
+    .caution {
+      border-left: 3px solid var(--danger);
+      padding-left: 0.7rem;
+      margin: 0.4rem 0 0.6rem;
+      font-size: 0.9rem;
+      color: var(--danger);
+    }
+
+    .note {
+      border-left: 3px solid var(--accent);
+      padding-left: 0.7rem;
+      margin: 0.4rem 0 0.6rem;
+      font-size: 0.9rem;
+      color: var(--accent-soft);
+    }
+
+    .toc {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .toc a {
+      color: var(--accent-soft);
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    .glossary-term {
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+
+    @media (min-width: 720px) {
+      header h1 {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="pill">
+        <span class="dot"></span>
+        <span>RageDance Kata</span>
+      </div>
+      <h1>Night Garden Sequence (Winter)</h1>
+      <p>Keeping the body fluid on cold nights · grounding rage and sorrow · listening for the city’s pulse.</p>
+      <p>Practice time: ~20–30 minutes (plus hoodie, tea, and sleep).</p>
+    </header>
+
+    <section class="card soft">
+      <h2>How to Use This Sequence</h2>
+      <p>This kata is designed for cold evenings when the day has left residue — the bus, the grind, the awkwardness, the small cruelties that try to follow you home. You don’t need expertise to begin. You need warmth, curiosity, and a little space to move.</p>
+      <div class="note">
+        <strong>Intention:</strong> RageDance is not for intimidation or performance. It is for regulation, presence, and pulse-wave resonance — changing not only how you feel, but how you act, eat, speak, sleep, and wake.
+      </div>
+
+      <p class="toc"><strong>Sequence Map</strong></p>
+      <ul class="toc">
+        <li><a href="#arrival">0. Arrival: Tapping & Listening</a></li>
+        <li><a href="#groundwork">1. Groundwork: Wide Cross-Legged Stretch</a></li>
+        <li><a href="#micro-kicks">2. Micro-Kicks & Wall Kicks</a></li>
+        <li><a href="#heavy-water">3. Heavy Water Layer (Resistance Imagery)</a></li>
+        <li><a href="#crescent-arc">4. Crescent Arc Variations</a></li>
+        <li><a href="#infinity-uppercuts">5. Infinity Uppercuts</a></li>
+        <li><a href="#palm-sway">6. Palm Sway & Coiled Palm Release</a></li>
+        <li><a href="#optional-power">7. Optional Power Layer & Cobra Breath</a></li>
+        <li><a href="#cooldown">8. Cooldown: Hoodie, Tea, Sleep</a></li>
+        <li><a href="#glossary">Movement Glossary</a></li>
+      </ul>
+
+      <div class="caution">
+        <strong>Safety first:</strong> Move slowly. Never push into sharp pain. If something hurts in a “bad” way, back off or stop. This is a practice, not a test.
+      </div>
+    </section>
+
+    <section id="arrival" class="card">
+      <div class="tag-row">
+        <span class="tag">Phase 0 · Arrival</span>
+        <span class="tag">Regulation</span>
+      </div>
+      <h2>0. Arrival: Tapping & Listening</h2>
+      <p>Before you “do” anything, arrive.</p>
+      <ul>
+        <li>Stand or sit comfortably, hoodie on, feet or sit-bones grounded.</li>
+        <li>Begin gentle <strong>tapping</strong> along chest, arms, thighs — wherever feels safe.</li>
+        <li>Let the day move through you: bus tensions, rude voices, the grind that tried to script your nervous system.</li>
+        <li>Change the space if you can: garden, balcony, open window, a plant by your side.</li>
+      </ul>
+      <p>Let yourself notice how tapping plus a change of setting shifts not just how you feel, but how you might act when you go back inside: how you speak, eat, sleep, and wake. This is already pulse-wave resonance in the body.</p>
+    </section>
+
+    <section id="groundwork" class="card">
+      <div class="tag-row">
+        <span class="tag">Phase 1 · Groundwork</span>
+        <span class="tag">Hips & Lateral Chain</span>
+      </div>
+      <h2>1. Wide Cross-Legged Elbow Stretch</h2>
+      <p><strong>Position:</strong></p>
+      <ul>
+        <li>Sit cross-legged, then slide your <strong>right heel forward</strong> until it is roughly in line with your left knee. This widens your base.</li>
+        <li>Keep your spine long as you inhale.</li>
+      </ul>
+      <p><strong>Movement:</strong></p>
+      <ul>
+        <li>Exhale and slowly fold forward.</li>
+        <li>Let your <strong>left elbow</strong> find your left knee, and your <strong>right elbow</strong> find your right knee.</li>
+        <li>Hang there, breathing. Imagine the outer hip, glute, and deep rotators “waking up” after a day of sitting.</li>
+      </ul>
+
+      <div class="caution">
+        If you feel sharp pain in the knees or lower back, back off. You can support yourself with your hands on the floor instead of resting fully on the elbows.
+      </div>
+
+      <p>Repeat on the other side (left heel forward) so both hips and both sides of your spine receive equal attention. This is where injury prevention begins.</p>
+    </section>
+
+    <section id="micro-kicks" class="card">
+      <div class="tag-row">
+        <span class="tag">Phase 2 · Standing Reset</span>
+        <span class="tag">Micro-Mobility</span>
+      </div>
+      <h2>2. Micro-Kicks & “Kick the Wall”</h2>
+
+      <h3>2.1 Gentle Back Kicks</h3>
+      <ul>
+        <li>Stand relaxed, feet about hip-width apart.</li>
+        <li>Let one leg bend gently at the knee and “kick” backward in a small, comfortable arc.</li>
+        <li>Enjoy the warm, soft activation where hamstring meets glute.</li>
+        <li>Let your whole body sway slightly with the rhythm.</li>
+      </ul>
+
+      <h3>2.2 “Kick the Wall” Side Kicks</h3>
+      <ul>
+        <li>Imagine a wall to your left.</li>
+        <li>Keep your <strong>left foot anchored</strong> and let your <strong>right leg</strong> deliver a small, closed-range kick toward that imaginary wall.</li>
+        <li>It doesn’t need power — just a gentle, focused motion.</li>
+        <li>Switch sides: right foot anchors, left leg kicks the “wall” to the right.</li>
+      </ul>
+
+      <p>These kicks wake the same muscle groups you opened in the cross-legged stretch. Office bodies and bus bodies will thank you.</p>
+    </section>
+
+    <section id="heavy-water" class="card">
+      <div class="tag-row">
+        <span class="tag">Phase 3 · Layer</span>
+        <span class="tag">Resistance Imagery</span>
+      </div>
+      <h2>3. Heavy Water Layer (Optional)</h2>
+      <p>From this point on, you can add the “heavy water” lens to any movement.</p>
+      <ul>
+        <li>Imagine you are moving through thick, heavy water.</li>
+        <li>Every gesture has resistance; muscles engage but don’t lock.</li>
+        <li>Your body warms quickly; your awareness settles.</li>
+      </ul>
+      <p>This is self-generated resistance training: a way to recruit more muscle fibers and deepen focus without external weights.</p>
+    </section>
+
+    <section id="crescent-arc" class="card">
+      <div class="tag-row">
+        <span class="tag">Phase 4 · Standing Patterns</span>
+        <span class="tag">Crescent Arc</span>
+        <span class="tag">Bilateral Training</span>
+      </div>
+      <h2>4. Crescent Arc Variations</h2>
+
+      <h3>4.1 Interlaced-Fingers Crescent Arc</h3>
+      <ul>
+        <li>Stand with feet about shoulder-width apart.</li>
+        <li>Interlace your fingers gently, palms inward or down.</li>
+        <li>Let the elbows draw an upward crescent arc — as if you’re tracing the rim of a moon in front of you.</li>
+      </ul>
+
+      <div class="note">
+        Interlacing the fingers limits range of motion and adds stability — a “training wheel” variation that can reduce anxiety and wild swings for beginners.
+      </div>
+
+      <h3>4.2 Counter-Tension Crescent Arc</h3>
+      <ul>
+        <li>Let your <strong>left leg be the anchor</strong>.</li>
+        <li>Your <strong>right elbow</strong> begins to rise in a crescent arc.</li>
+        <li>At the same time, your <strong>right leg subtly lowers or “drops”</strong>, creating a line of opposite tension.</li>
+        <li>The right leg is free to step slightly wider, lightly forward (if needed), or back to retreat.</li>
+      </ul>
+
+      <h3>4.3 Fingers as Punctuation</h3>
+      <ul>
+        <li>Start the arc with your fingers spread wide, alive.</li>
+        <li>As the elbow reaches the top of the crescent, let the fingers close into a soft fist.</li>
+        <li>Feel the gesture “close” like a sentence ending — a small, satisfying punctuation.</li>
+      </ul>
+
+      <div class="note">
+        <strong>Bilateral training:</strong> Always repeat on the other side. Even at the beginning, train both directions so your body learns symmetry and your “quiet side” doesn’t become the injured side.
+      </div>
+    </section>
+
+    <section id="infinity-uppercuts" class="card">
+      <div class="tag-row">
+        <span class="tag">Phase 5 · Loops</span>
+        <span class="tag">Infinity Uppercuts</span>
+      </div>
+      <h2>5. Infinity Uppercuts</h2>
+      <p>Think of uppercuts that never quite become strikes — they travel in looping infinity patterns.</p>
+      <ul>
+        <li>Start with small, circular “uppercuts” in front of your body.</li>
+        <li>Let each hand trace a tight loop that curves inward rather than jabbing outward.</li>
+        <li>Allow your hips, ribs, and breath to join the rhythm.</li>
+        <li>Play with tempo: slow and meditative, then as fast as you safely can while keeping the loops compact.</li>
+        <li>Gradually raise the loops up toward chest, then shoulder height, noticing how your lungs and ribs open.</li>
+      </ul>
+
+      <div class="caution">
+        Keep the loops compact and pain-free. If your shoulders complain, slow down, reduce range, or return to lower, smaller loops.
+      </div>
+    </section>
+
+    <section id="palm-sway" class="card">
+      <div class="tag-row">
+        <span class="tag">Phase 6 · Boundary Work</span>
+        <span class="tag">Palm Sway</span>
+      </div>
+      <h2>6. Palm Sway & Soft Boundary</h2>
+
+      <h3>6.1 Palm Sway (Qigong-Inspired)</h3>
+      <ul>
+        <li>Stand in a balanced stance, one foot slightly in front of the other.</li>
+        <li>Extend your <strong>left palm forward</strong>, palm facing out, as if saying “enough.”</li>
+        <li>Then let your <strong>right palm</strong> extend forward while the left draws back.</li>
+        <li>Arms move like a gentle infinity loop — one forward, one back.</li>
+        <li>Let your hips and feet turn naturally into each extension; when the right palm extends, the right foot may pivot or lean into the motion, and the same on the left.</li>
+      </ul>
+
+      <p>This can be the softest form of boundary: a full-body, gentle “no further” that includes breath and spine.</p>
+
+      <h3 id="coiled-palm">6.2 Coiled Palm Release (Optional Power Variant)</h3>
+      <div class="tag-row">
+        <span class="tag power">Power Layer (Optional)</span>
+      </div>
+      <ul>
+        <li>Begin from Palm Sway.</li>
+        <li>As your <strong>right palm</strong> prepares to extend, <strong>coil the left arm back</strong> so the left elbow draws behind you.</li>
+        <li>Let the whole body twist and uncoil as the right palm presses forward.</li>
+        <li>Feel the wave starting from your feet, traveling through hips and spine, and arriving in the palm.</li>
+      </ul>
+
+      <p>The physics here echo the “one-inch punch”: a short, coiled wave of force traveling through the whole body. In RageDance, this is trained as awareness and potential, not as a tool for dominance.</p>
+
+      <div class="caution">
+        Keep this in the realm of practice and awareness, not rehearsal for hurting others. If you notice fantasies of harm taking over, pause the movement, return to tapping and the garden, and breathe.
+      </div>
+    </section>
+
+    <section id="optional-power" class="card">
+      <div class="tag-row">
+        <span class="tag power">Advanced Layer (Optional)</span>
+        <span class="tag caution-tag">Use Sparingly</span>
+      </div>
+      <h2>7. Survival Lift Arc & Cobra Breath</h2>
+
+      <h3>7.1 Survival Lift Arc</h3>
+      <p>This pattern is for your internal library — something you may never need, but your body can quietly remember.</p>
+      <ul>
+        <li>Stand as if on a bus: relaxed, blending in, but awake.</li>
+        <li>From the feet, <strong>gather energy upward</strong> — ankles, knees, hips, spine, shoulders.</li>
+        <li>Let your body rise in one unified pulse; your feet may momentarily lighten from the floor.</li>
+        <li>At the peak of this rise, a single tight elbow arc sweeps through space.</li>
+        <li>Then immediately release back to relaxed stance.</li>
+      </ul>
+
+      <div class="caution">
+        This belongs in the “boundary / survival” library, not in everyday play. Do not drill it obsessively. Touch it lightly, know you can rise if you must, and return to softer patterns.
+      </div>
+
+      <h3>7.2 Cobra Breath (Intermediate · Neck/Throat)</h3>
+      <ul>
+        <li>Only after you are thoroughly warmed.</li>
+        <li>Inhale and gently lengthen your spine upward.</li>
+        <li>Lift your chin slightly, opening the front of the throat and upper chest.</li>
+        <li>Stay below the threshold of “too much” — this should feel intense but not sharp.</li>
+      </ul>
+
+      <div class="caution">
+        Many people carry fear, grief, or tightness in the throat and upper chest. This can feel overwhelming. Move slowly. If there is pain, dizziness, or panic, come back to neutral and simply breathe.
+      </div>
+    </section>
+
+    <section id="cooldown" class="card soft">
+      <div class="tag-row">
+        <span class="tag">Phase 8 · Cooldown</span>
+        <span class="tag">Re-Wrap</span>
+      </div>
+      <h2>8. Cooldown: Hoodie, Tea, Sleep</h2>
+      <ul>
+        <li>As your body warms, you may naturally remove your hoodie. That’s the Night Garden doing its work.</li>
+        <li>When you’re done, <strong>put the hoodie back on</strong> to keep the warmth you’ve earned.</li>
+        <li>Have tea if you can — jute mate, or whatever comforts you.</li>
+        <li>Let sleep be part of the practice, not an afterthought.</li>
+      </ul>
+      <p>Remember: RageDance is not only what happens on the mat or in the garden. It is how those pulses change the way you walk back into the house, greet the cat, answer a message, or meet tomorrow.</p>
+    </section>
+
+    <section id="glossary" class="card">
+      <div class="tag-row">
+        <span class="tag">Glossary</span>
+        <span class="tag">Shared Language</span>
+      </div>
+      <h2>Movement Glossary (Light Touch)</h2>
+      <p><span class="glossary-term">Bilateral training</span>: Practicing both sides of the body (left/right) so one side doesn’t become overused and the other neglected.</p>
+      <p><span class="glossary-term">Proprioception</span>: Your body’s sense of where it is in space — “knowing” the position of your limbs without looking.</p>
+      <p><span class="glossary-term">Kinesthetic awareness</span>: Awareness of how your body is moving — quality, speed, direction, rhythm.</p>
+      <p><span class="glossary-term">Lateral chain</span>: The line of muscles running up the side of the body (outer hip, glute, IT band, obliques, side of the rib cage).</p>
+      <p><span class="glossary-term">Overuse imbalance</span>: When one side or region does most of the work and becomes tight or injured while the “quiet” side stays weak and vulnerable.</p>
+      <p><span class="glossary-term">Pulse-wave resonance</span>: The way a change in your state (breath, attention, movement) ripples outward — into mood, behavior, relationship, and the small choices that shape a life.</p>
+    </section>
+
+    <footer>
+      <p>Imagine you are an oyster in a reef of city lights — noisy neighbor, lonely dog, cat on the fence, buses sighing on distant streets. Each wave of sound and motion is a breath that calls you home again and again until you remember: this is your home. It has always been your home.</p>
+      <p><strong>Welcome to the Flower Road.</strong></p>
+    </footer>
+  </div>
+</body>
+</html>
