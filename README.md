@@ -12,7 +12,7 @@
   </ul>
 
   <p>RageDance rejects domination, spectacle, intimidation, and posturing.<br>
-  <strong>The purpose of RageDance is not to win — it is to stay human.</strong></p>
+  <strong>The purpose of RageDance is not to win — it is to stay human. RageDance prioritizes precision over intensity. When balance, clarity, or control degrade, practitioners pause, recalibrate, and re-enter.</strong></p>
 
   <p>Any practitioner or teacher who uses RageDance to look powerful, impress, or elevate themselves above others breaks the lineage.</p>
 </section>
