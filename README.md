@@ -1,6 +1,6 @@
 # RageDance
 
-RageDance is a movement practice for unwinding rage into regulation, play, and non-threatening presence.
+RageDance is a movement practice for unwinding grief, rage and pressure into regulation, play, and non-threatening presence.
 
 It is ecological, non-competitive, and grounded in lived field experience.
 
