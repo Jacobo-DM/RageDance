@@ -1,18 +1,40 @@
+# RageDance
 
-<section id="lineage">
-  <h2>RageDance Lineage</h2>
-  <p><strong>RageDance is a practice of movement and presence developed in lived contexts of stress, danger, and healing. It belongs to no single tradition and replaces none.</strong></p>
+RageDance is a movement practice for unwinding rage into regulation, play, and non-threatening presence.
 
-  <p>It emerges from:</p>
-  <ul>
-    <li><strong>Street reality:</strong> environments where threat, unpredictability, and compression shape behavior.</li>
-    <li><strong>Somatic wisdom:</strong> breath, fascia, rhythm, and pulse-wave recognition.</li>
-    <li><strong>Embodied ethics:</strong> choosing not to harm when harm is possible.</li>
-    <li><strong>Communal repair:</strong> returning to the circle after rupture.</li>
-  </ul>
+It is ecological, non-competitive, and grounded in lived field experience.
 
-  <p>RageDance rejects domination, spectacle, intimidation, and posturing.<br>
-  <strong>The purpose of RageDance is not to win — it is to stay human. RageDance prioritizes precision over intensity. When balance, clarity, or control degrade, practitioners pause, recalibrate, and re-enter.</strong></p>
+---
 
-  <p>Any practitioner or teacher who uses RageDance to look powerful, impress, or elevate themselves above others breaks the lineage.</p>
-</section>
+## What this repository is
+
+This repository holds:
+- field notes from lived RageDance practice
+- movement patterns and warmups
+- ethical boundaries and lineage statements
+- curriculum-facing materials for teachers and facilitators
+
+RageDance prioritizes **precision over intensity** and **presence over performance**.
+
+---
+
+## Start here
+
+If you are new, begin with:
+
+- `field-notes/2025-12-12-unwinding.md`  
+  *(A grounding field note that captures the core logic of RageDance in practice)*
+
+From there, explore practices, patterns, and modules at your own pace.
+
+---
+
+## A note on use
+
+RageDance rejects domination, spectacle, intimidation, and posturing.
+
+It is not designed to make anyone look powerful.
+It is designed to help people **stay human** under pressure.
+
+For lineage, ethics, and teaching guidance, see the linked documents in this repository.
+
