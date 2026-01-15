@@ -103,3 +103,64 @@ During clocks:
 
 There is no fixed “correct” direction.
 The practice is exploratory and responsive.
+## Cooling Down: Holding the Pattern
+
+Cooling down does not require immediately changing the state of the body.
+
+After the sequence:
+- when breath has returned naturally,
+- when the body feels open, coordinated, or lightly humming,
+
+**pause**.
+
+Remain still for a short time.
+This may be done:
+- in silence,
+- or with music that feels supportive rather than directive.
+
+The emphasis is not relaxation as collapse, but **rest with awareness**.
+
+### Why This Matters
+Holding the state allows the body to:
+- recognize the pattern it has entered,
+- associate movement with ease and coherence,
+- remember the feeling of being in tune.
+
+Nothing needs to be forced or analyzed.
+Simply staying with the sensation is enough.
+
+Over time, this supports pattern recognition and recall.
+The feeling does not remain confined to practice—it gradually becomes familiar.
+## Language, Care, and Endlessness
+
+RageDance avoids rigid labels and corrective framing.
+
+Rather than focusing on “fixing” or “optimizing,” this practice emphasizes:
+- noticing
+- anchoring
+- remembering
+
+Small choices in language matter.
+A single word can change how a practice is received or avoided.
+Care is taken to describe experience without imposing interpretation.
+
+### On Care
+This sequence is adaptable by design.
+Support, slowness, and range reduction are always valid options.
+There is no benefit in pushing through pain or instability.
+
+Listening is part of the practice.
+
+### On Endlessness
+This sequence points toward an important understanding:
+
+RageDance is not a system of finite forms or goals.
+It does not aim toward accumulation or completion.
+
+Forms emerge.
+They evolve.
+They dissolve.
+
+The practice remains open.
+
+What matters is not reaching an endpoint, but developing the capacity to move with awareness, agency, and responsiveness—again and again, in changing conditions.
