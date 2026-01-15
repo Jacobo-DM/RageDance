@@ -60,4 +60,46 @@ This entire sequence can be performed **seated**:
 - Elbows may rest on thighs
 - The same pendulum motion applies
 
-Repe
+Repeat as desired.
+## The Clocks Layer (360° Orientation)
+
+The “clocks” layer refers to **continuous circular movement**, both clockwise and counter-clockwise, expressed through the whole body.
+
+This includes moving **toward the cardinal points** (north, east, south, west) and through **all angles between them**. Each shift in orientation changes balance, momentum, and sensory input.
+
+This is not symbolic.  
+It is physical and perceptual.
+
+### How It Enters
+- The clocks layer may arise naturally from the pendulum squat,
+  or be introduced once standing.
+- Arms, legs, spine, and breath circulate together.
+- Direction changes are gradual and responsive.
+
+### What Changes
+As orientation shifts, practitioners may notice:
+- different muscular engagement
+- changes in balance and momentum
+- shifts in sound, light, shadow, and spatial awareness
+
+Each direction offers a distinct sensory experience.
+
+### Early Awkwardness
+At first, clocks can feel unfamiliar or clumsy.
+This is expected.
+
+As continuity develops:
+- movement becomes smoother
+- transitions link naturally
+- the body begins to anticipate the next arc
+
+Once the flow arrives, the sequence often feels effortless and enjoyable.
+
+### Awareness
+During clocks:
+- the body moves
+- attention listens
+- the mind observes rather than directs
+
+There is no fixed “correct” direction.
+The practice is exploratory and responsive.
