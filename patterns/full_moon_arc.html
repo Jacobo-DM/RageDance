@@ -5,34 +5,294 @@
   <title>RageDance · Full Moon Arc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400&display=swap" rel="stylesheet">
   <style>
-    body{margin:0;background:#0b0f16;color:#e5e7eb;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
-    nav{background:#020617;border-bottom:1px solid #1f2933;padding:.75rem 1.25rem}
-    nav a{color:#e5e7eb;text-decoration:none;margin-right:1rem;font-size:.9rem}
-    nav a:hover{color:#fbbf24}
-    .wrap{max-width:800px;margin:0 auto;padding:2.5rem 1.25rem 3.5rem}
-    h1{text-align:center;margin-bottom:1.5rem}
-    h2{margin-top:2.2rem;color:#fbbf24;text-transform:uppercase;letter-spacing:.04em;font-size:1.05rem}
-    hr{border:none;border-top:1px solid #1f2933;margin:2.25rem 0}
-    ul{margin-left:1.2rem}
-    footer{margin-top:3rem;text-align:center;font-size:.85rem;color:#9ca3af}
-    .pill{display:inline-block;padding:.15rem .55rem;border:1px solid #1f2933;border-radius:999px;color:#9ca3af;font-size:.85rem}
+    :root {
+      --clay:       #1c1510;
+      --earth:      #2e2118;
+      --card:       #251a12;
+      --card-soft:  #201610;
+      --terracotta: #c4623a;
+      --ochre:      #c9963a;
+      --sand:       #e8d9c4;
+      --dust:       #a89070;
+      --fog:        #6a5a4a;
+      --ember:      #d4824a;
+      --pale:       #f2e8d8;
+      --line:       rgba(106,90,74,0.28);
+      --line-soft:  rgba(106,90,74,0.14);
+      --accent:     #c4623a;
+      --accent-soft:rgba(196,98,58,0.12);
+      --max: 800px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 17px; }
+    body {
+      background: var(--clay);
+      color: var(--sand);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    a { color: var(--ember); text-decoration: none; transition: color .18s; }
+    a:hover { color: var(--pale); text-decoration: underline; }
+
+    /* ── Circle field ── */
+    .rd-circles {
+      position: fixed; inset: 0;
+      pointer-events: none; z-index: 0; overflow: hidden;
+    }
+    /* large partial circles bleeding off edges */
+    .rd-circles::before {
+      content: '';
+      position: absolute;
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      border: 1px solid rgba(196,98,58,0.08);
+      top: -280px; left: -200px;
+    }
+    .rd-circles::after {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,150,58,0.07);
+      bottom: -180px; right: -160px;
+    }
+    .rd-drift {
+      position: absolute; border-radius: 50%;
+      border: 1px solid rgba(196,98,58,0.13);
+      animation: rd-drift linear infinite;
+    }
+    .rd-drift:nth-child(1){ width:160px;height:160px; top:28%;right:6%;  animation-duration:48s; }
+    .rd-drift:nth-child(2){ width:52px; height:52px;  top:58%;left:10%;  animation-duration:31s; animation-direction:reverse; border-color:rgba(201,150,58,0.18); }
+    .rd-drift:nth-child(3){ width:240px;height:240px; top:70%;right:30%; animation-duration:55s; border-color:rgba(196,98,58,0.07); }
+    .rd-drift:nth-child(4){ width:30px; height:30px;  top:14%;left:22%;  animation-duration:22s; border-color:rgba(232,217,196,0.12); }
+    @keyframes rd-drift {
+      0%   { transform: translate(0,0) rotate(0deg); }
+      33%  { transform: translate(10px,-14px) rotate(120deg); }
+      66%  { transform: translate(-6px,8px) rotate(240deg); }
+      100% { transform: translate(0,0) rotate(360deg); }
+    }
+
+    /* ── Nav ── */
+    .rd-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: linear-gradient(to bottom, #100b07, #1c1510);
+      border-bottom: 1px solid rgba(196,98,58,0.18);
+    }
+    .rd-nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: .6rem 1.25rem;
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    }
+    .rd-brand {
+      font-family: 'Cormorant Upright', serif;
+      font-size: 1rem; font-weight: 300;
+      letter-spacing: 0.1em;
+      color: var(--pale); text-decoration: none;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .rd-brand:hover { color: #fff; text-decoration: none; }
+    .rd-nav-links { list-style:none; display:flex; flex-wrap:wrap; gap:.1rem; }
+    .rd-nav-links li { display:inline; }
+    .rd-nav-links a {
+      color: var(--fog); font-size: .78rem; padding: .22rem .5rem;
+      border-radius: 3px; transition: color .15s, background .15s;
+      text-decoration: none;
+    }
+    .rd-nav-links a:hover  { color: var(--ember); background: rgba(196,98,58,.07); text-decoration:none; }
+    .rd-nav-links a.active { color: var(--terracotta); background: rgba(196,98,58,.08); }
+
+    /* ── Page wrapper ── */
+    .rd-page {
+      position: relative; z-index: 1;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 2.8rem 1.5rem 5rem;
+    }
+
+    /* ── Typography ── */
+    h1 {
+      font-family: 'Cormorant Upright', serif;
+      font-weight: 300;
+      font-size: clamp(1.9rem, 5vw, 2.6rem);
+      color: var(--pale);
+      line-height: 1.15;
+      letter-spacing: .04em;
+      margin-bottom: .5rem;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.3rem;
+      color: var(--ember);
+      margin: 2rem 0 .4rem;
+      letter-spacing: .03em;
+    }
+    h3 {
+      font-size: .95rem; font-weight: 400;
+      color: var(--sand);
+      margin: 1.3rem 0 .3rem;
+      text-transform: uppercase; letter-spacing: .1em;
+    }
+    p { margin-bottom: .8rem; font-size: .95rem; color: var(--dust); }
+    p strong { color: var(--sand); font-weight: 400; }
+    ul, ol { padding-left: 1.2rem; margin-bottom: .9rem; }
+    li { margin-bottom: .3rem; font-size: .93rem; color: var(--dust); }
+    li strong { color: var(--sand); font-weight: 400; }
+
+    /* ── Page header block ── */
+    .rd-header {
+      margin-bottom: 2.4rem;
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .rd-tag {
+      font-size: .68rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--fog);
+      margin-bottom: .8rem;
+    }
+    .rd-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 1.05rem; color: var(--dust);
+      margin-bottom: .6rem;
+    }
+    .rd-byline {
+      font-size: .78rem; color: var(--fog); margin-top: .5rem;
+    }
+    .rd-byline a { color: var(--dust); }
+    .rd-back {
+      display: inline-block;
+      font-size: .72rem; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--fog);
+      text-decoration: none; margin-bottom: 2rem;
+      transition: color .18s;
+    }
+    .rd-back:hover { color: var(--dust); text-decoration:none; }
+    .rd-back::before { content: '← '; }
+
+    /* ── Section card ── */
+    .rd-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 1.3rem 1.4rem 1.4rem;
+      margin: 1.2rem 0;
+    }
+    .rd-card h2 { margin-top: 0; }
+
+    /* ── Callout / note ── */
+    .rd-callout {
+      background: var(--accent-soft);
+      border: 1px solid rgba(196,98,58,.28);
+      border-radius: 2px;
+      padding: .7rem .9rem;
+      font-size: .87rem; color: var(--dust);
+      margin: .9rem 0;
+    }
+    .rd-callout strong { color: var(--terracotta); font-weight: 400; }
+    .rd-note {
+      border-left: 2px solid var(--terracotta);
+      padding-left: .9rem;
+      font-size: .87rem; color: var(--fog);
+      margin: .7rem 0;
+    }
+    .rd-caution {
+      border-left: 2px solid #a05040;
+      padding-left: .9rem;
+      font-size: .87rem; color: #c09080;
+      margin: .7rem 0;
+    }
+
+    /* ── Quote ── */
+    blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 1.1rem; color: var(--dust);
+      border-left: 2px solid var(--terracotta);
+      padding-left: 1rem; margin: 1.4rem 0;
+      line-height: 1.65;
+    }
+
+    /* ── Divider ── */
+    .rd-rule {
+      border: none;
+      border-top: 1px solid var(--line-soft);
+      margin: 1.8rem 0;
+    }
+
+    /* ── Tag pill ── */
+    .rd-pill {
+      display: inline-block;
+      font-size: .68rem; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--fog);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: .12rem .55rem; margin-bottom: .5rem;
+    }
+    .rd-pill.power { color: var(--ochre); border-color: rgba(201,150,58,.35); }
+    .rd-pill.caution { color: #b07060; border-color: rgba(160,80,60,.35); }
+
+    /* ── Footer ── */
+    .rd-footer {
+      margin-top: 3.5rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--line-soft);
+      font-size: .75rem; color: var(--fog);
+      line-height: 1.8;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 520px) {
+      .rd-page { padding: 2rem 1.1rem 4rem; }
+    }
   </style>
+
 </head>
 
 <body>
-<nav>
-  <a href="../index.html">Home</a>
-  <a href="../lineage.html">Lineage</a>
-  <a href="../ethics.html">Ethics</a>
-  <a href="../glossary.html">Glossary</a>
-  <a href="../warmups/">Warm-ups</a>
-  <a href="../field_practices/">Field Practices</a>
-  <a href="../patterns/">Patterns</a>
-</nav>
 
-<div class="wrap">
-  <h1>Full Moon Arc <span class="pill">A RageDance Circuit</span></h1>
+
+<div class="rd-circles" aria-hidden="true">
+  <div class="rd-drift"></div>
+  <div class="rd-drift"></div>
+  <div class="rd-drift"></div>
+  <div class="rd-drift"></div>
+</div>
+
+<nav class="rd-nav">
+  <div class="rd-nav-inner">
+    <a href="../index.html" class="rd-brand">RageDance</a>
+    <ul class="rd-nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../ragedance-primer.html">Primer</a></li>
+      <li><a href="../warmups.html">Warm-Ups</a></li>
+      <li><a href="../declaration.html">Declaration</a></li>
+      <li><a href="../lineage.html">Lineage</a></li>
+      <li><a href="../glossary.html">Glossary</a></li>
+      <li><a href="../ragedance-teachers.html">Teachers</a></li>
+      <li><a href="../ragedance-license.html">License</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="rd-page">
+
+  <div class="rd-header">
+  <div class="rd-tag">RageDance · Circuit</div>
+  <h1>Full Moon Arc</h1>
+  <p class="rd-subtitle">A circuit, not a kata. Completion over correctness. Sensing over shape.</p>
+  <a href="../index.html" class="rd-back">RageDance Home</a>
+</div>
 
   <h2>What This Is</h2>
   <p>
@@ -42,7 +302,7 @@
     The Arc is orbital, tidal, and whole-body — not symmetrical, not contained.
   </p>
 
-  <hr>
+  <hr class="rd-rule">
 
   <h2>Core Ethic</h2>
   <p><strong>Precision before intensity.</strong></p>
@@ -52,7 +312,7 @@
     Stopping is part of the circuit.
   </p>
 
-  <hr>
+  <hr class="rd-rule">
 
   <h2>Entry: Awareness Stance</h2>
   <p>Begin in a relaxed guard or awareness stance:</p>
@@ -63,7 +323,7 @@
   </ul>
   <p>This is not a fighting stance — it is a <em>listening stance</em>.</p>
 
-  <hr>
+  <hr class="rd-rule">
 
   <h2>The Arc</h2>
   <p>From awareness stance:</p>
@@ -75,7 +335,7 @@
   </ul>
   <p>The arc is continuous and adjustable.</p>
 
-  <hr>
+  <hr class="rd-rule">
 
   <h2>Knee Controls the Arc</h2>
   <p>The <strong>knee controls height and depth</strong>:</p>
@@ -86,7 +346,7 @@
   </ul>
   <p>Nothing is forced. Range emerges through repetition, not effort.</p>
 
-  <hr>
+  <hr class="rd-rule">
 
   <h2>Sensing the Field</h2>
   <ul>
@@ -96,7 +356,7 @@
   </ul>
   <p>In group settings, practitioners may begin to sense the pulses of others. This is awareness, not contact.</p>
 
-  <hr>
+  <hr class="rd-rule">
 
   <h2>Completion</h2>
   <p>The circuit completes when:</p>
@@ -106,7 +366,7 @@
   </ul>
   <p>Exit by returning to awareness stance or by standing quietly.</p>
 
-  <hr>
+  <hr class="rd-rule">
 
   <h2>Fool Moon Note</h2>
   <p>At times, the Full Moon Arc becomes <strong>Fool Moon</strong>:</p>
@@ -118,7 +378,7 @@
   </ul>
   <p>This is not failure. This is permission. Play keeps the circuit alive and prevents dogma.</p>
 
-  <hr>
+  <hr class="rd-rule">
 
   <h2>Teaching Notes</h2>
   <ul>
@@ -128,7 +388,7 @@
   </ul>
   <p>This circuit often produces a strong sense of <em>remembered movement</em>. That response is normal.</p>
 
-  <hr>
+  <hr class="rd-rule">
 
   <h2>Lineage Note</h2>
   <p>
@@ -138,6 +398,8 @@
 
   <footer>“Completion matters more than correctness. Sensing matters more than shape.”</footer>
 </div>
+</div>
+
 </body>
 </html>
 

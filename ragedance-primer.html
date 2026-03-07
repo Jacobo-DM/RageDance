@@ -4,140 +4,291 @@
   <meta charset="UTF-8">
   <title>RageDance Primer · A Flower Road Practice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #050608;
-      --fg: #f5f5f5;
-      --accent: #ff6b3d;
-      --accent-soft: rgba(255, 107, 61, 0.12);
-      --card-bg: #13151a;
-      --muted: #b7bac4;
-      --border: #272a33;
+      --clay:       #1c1510;
+      --earth:      #2e2118;
+      --card:       #251a12;
+      --card-soft:  #201610;
+      --terracotta: #c4623a;
+      --ochre:      #c9963a;
+      --sand:       #e8d9c4;
+      --dust:       #a89070;
+      --fog:        #6a5a4a;
+      --ember:      #d4824a;
+      --pale:       #f2e8d8;
+      --line:       rgba(106,90,74,0.28);
+      --line-soft:  rgba(106,90,74,0.14);
+      --accent:     #c4623a;
+      --accent-soft:rgba(196,98,58,0.12);
+      --max: 800px;
     }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 17px; }
     body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #171923 0, #050608 48%);
-      color: var(--fg);
-      line-height: 1.6;
+      background: var(--clay);
+      color: var(--sand);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
-    .wrap {
-      max-width: 960px;
+    a { color: var(--ember); text-decoration: none; transition: color .18s; }
+    a:hover { color: var(--pale); text-decoration: underline; }
+
+    /* ── Circle field ── */
+    .rd-circles {
+      position: fixed; inset: 0;
+      pointer-events: none; z-index: 0; overflow: hidden;
+    }
+    /* large partial circles bleeding off edges */
+    .rd-circles::before {
+      content: '';
+      position: absolute;
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      border: 1px solid rgba(196,98,58,0.08);
+      top: -280px; left: -200px;
+    }
+    .rd-circles::after {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,150,58,0.07);
+      bottom: -180px; right: -160px;
+    }
+    .rd-drift {
+      position: absolute; border-radius: 50%;
+      border: 1px solid rgba(196,98,58,0.13);
+      animation: rd-drift linear infinite;
+    }
+    .rd-drift:nth-child(1){ width:160px;height:160px; top:28%;right:6%;  animation-duration:48s; }
+    .rd-drift:nth-child(2){ width:52px; height:52px;  top:58%;left:10%;  animation-duration:31s; animation-direction:reverse; border-color:rgba(201,150,58,0.18); }
+    .rd-drift:nth-child(3){ width:240px;height:240px; top:70%;right:30%; animation-duration:55s; border-color:rgba(196,98,58,0.07); }
+    .rd-drift:nth-child(4){ width:30px; height:30px;  top:14%;left:22%;  animation-duration:22s; border-color:rgba(232,217,196,0.12); }
+    @keyframes rd-drift {
+      0%   { transform: translate(0,0) rotate(0deg); }
+      33%  { transform: translate(10px,-14px) rotate(120deg); }
+      66%  { transform: translate(-6px,8px) rotate(240deg); }
+      100% { transform: translate(0,0) rotate(360deg); }
+    }
+
+    /* ── Nav ── */
+    .rd-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: linear-gradient(to bottom, #100b07, #1c1510);
+      border-bottom: 1px solid rgba(196,98,58,0.18);
+    }
+    .rd-nav-inner {
+      max-width: var(--max);
       margin: 0 auto;
-      padding: 2.5rem 1.25rem 3rem;
+      padding: .6rem 1.25rem;
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 1rem; flex-wrap: wrap;
     }
-    header {
-      padding: 1.5rem 1.5rem 1.25rem;
-      border-radius: 1rem;
-      background: linear-gradient(135deg, #111320, #181b28);
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      box-shadow: 0 22px 45px rgba(0, 0, 0, 0.65);
-      margin-bottom: 2rem;
+    .rd-brand {
+      font-family: 'Cormorant Upright', serif;
+      font-size: 1rem; font-weight: 300;
+      letter-spacing: 0.1em;
+      color: var(--pale); text-decoration: none;
+      white-space: nowrap; flex-shrink: 0;
     }
-    .tag {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-    }
-    h1 {
-      margin: 0.5rem 0 0.2rem;
-      font-size: clamp(1.9rem, 4vw, 2.4rem);
-    }
-    .subtitle {
-      margin: 0;
-      font-size: 1rem;
-      color: var(--muted);
-    }
-    .byline {
-      margin-top: 0.75rem;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-    .byline strong {
-      color: #fff;
-    }
-    main {
-      display: grid;
-      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.2fr);
-      gap: 1.75rem;
-    }
-    @media (max-width: 780px) {
-      main {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-    .card {
-      background: var(--card-bg);
-      border-radius: 0.9rem;
-      border: 1px solid var(--border);
-      padding: 1.35rem 1.4rem 1.4rem;
-      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45);
-    }
-    .card h2 {
-      margin: 0 0 0.4rem;
-      font-size: 1.1rem;
-    }
-    .card h3 {
-      margin: 0.8rem 0 0.3rem;
-      font-size: 1rem;
-    }
-    .card p {
-      margin: 0.25rem 0 0.6rem;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-    ul {
-      margin: 0.4rem 0 0.6rem 1.1rem;
-      padding: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-    li {
-      margin: 0.18rem 0;
-    }
-    .callout {
-      background: var(--accent-soft);
-      border-radius: 0.75rem;
-      padding: 0.75rem 0.9rem;
-      font-size: 0.88rem;
-      color: var(--muted);
-      border: 1px solid rgba(255, 107, 61, 0.35);
-      margin-top: 0.8rem;
-    }
-    .callout strong {
-      color: var(--accent);
-    }
-    a {
-      color: #ff9b73;
+    .rd-brand:hover { color: #fff; text-decoration: none; }
+    .rd-nav-links { list-style:none; display:flex; flex-wrap:wrap; gap:.1rem; }
+    .rd-nav-links li { display:inline; }
+    .rd-nav-links a {
+      color: var(--fog); font-size: .78rem; padding: .22rem .5rem;
+      border-radius: 3px; transition: color .15s, background .15s;
       text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
+    .rd-nav-links a:hover  { color: var(--ember); background: rgba(196,98,58,.07); text-decoration:none; }
+    .rd-nav-links a.active { color: var(--terracotta); background: rgba(196,98,58,.08); }
+
+    /* ── Page wrapper ── */
+    .rd-page {
+      position: relative; z-index: 1;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 2.8rem 1.5rem 5rem;
     }
-    footer {
-      margin-top: 2.5rem;
-      padding-top: 1rem;
-      border-top: 1px solid #1c1f28;
-      font-size: 0.85rem;
-      color: var(--muted);
+
+    /* ── Typography ── */
+    h1 {
+      font-family: 'Cormorant Upright', serif;
+      font-weight: 300;
+      font-size: clamp(1.9rem, 5vw, 2.6rem);
+      color: var(--pale);
+      line-height: 1.15;
+      letter-spacing: .04em;
+      margin-bottom: .5rem;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.3rem;
+      color: var(--ember);
+      margin: 2rem 0 .4rem;
+      letter-spacing: .03em;
+    }
+    h3 {
+      font-size: .95rem; font-weight: 400;
+      color: var(--sand);
+      margin: 1.3rem 0 .3rem;
+      text-transform: uppercase; letter-spacing: .1em;
+    }
+    p { margin-bottom: .8rem; font-size: .95rem; color: var(--dust); }
+    p strong { color: var(--sand); font-weight: 400; }
+    ul, ol { padding-left: 1.2rem; margin-bottom: .9rem; }
+    li { margin-bottom: .3rem; font-size: .93rem; color: var(--dust); }
+    li strong { color: var(--sand); font-weight: 400; }
+
+    /* ── Page header block ── */
+    .rd-header {
+      margin-bottom: 2.4rem;
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .rd-tag {
+      font-size: .68rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--fog);
+      margin-bottom: .8rem;
+    }
+    .rd-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 1.05rem; color: var(--dust);
+      margin-bottom: .6rem;
+    }
+    .rd-byline {
+      font-size: .78rem; color: var(--fog); margin-top: .5rem;
+    }
+    .rd-byline a { color: var(--dust); }
+    .rd-back {
+      display: inline-block;
+      font-size: .72rem; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--fog);
+      text-decoration: none; margin-bottom: 2rem;
+      transition: color .18s;
+    }
+    .rd-back:hover { color: var(--dust); text-decoration:none; }
+    .rd-back::before { content: '← '; }
+
+    /* ── Section card ── */
+    .rd-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 1.3rem 1.4rem 1.4rem;
+      margin: 1.2rem 0;
+    }
+    .rd-card h2 { margin-top: 0; }
+
+    /* ── Callout / note ── */
+    .rd-callout {
+      background: var(--accent-soft);
+      border: 1px solid rgba(196,98,58,.28);
+      border-radius: 2px;
+      padding: .7rem .9rem;
+      font-size: .87rem; color: var(--dust);
+      margin: .9rem 0;
+    }
+    .rd-callout strong { color: var(--terracotta); font-weight: 400; }
+    .rd-note {
+      border-left: 2px solid var(--terracotta);
+      padding-left: .9rem;
+      font-size: .87rem; color: var(--fog);
+      margin: .7rem 0;
+    }
+    .rd-caution {
+      border-left: 2px solid #a05040;
+      padding-left: .9rem;
+      font-size: .87rem; color: #c09080;
+      margin: .7rem 0;
+    }
+
+    /* ── Quote ── */
+    blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 1.1rem; color: var(--dust);
+      border-left: 2px solid var(--terracotta);
+      padding-left: 1rem; margin: 1.4rem 0;
+      line-height: 1.65;
+    }
+
+    /* ── Divider ── */
+    .rd-rule {
+      border: none;
+      border-top: 1px solid var(--line-soft);
+      margin: 1.8rem 0;
+    }
+
+    /* ── Tag pill ── */
+    .rd-pill {
+      display: inline-block;
+      font-size: .68rem; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--fog);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: .12rem .55rem; margin-bottom: .5rem;
+    }
+    .rd-pill.power { color: var(--ochre); border-color: rgba(201,150,58,.35); }
+    .rd-pill.caution { color: #b07060; border-color: rgba(160,80,60,.35); }
+
+    /* ── Footer ── */
+    .rd-footer {
+      margin-top: 3.5rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--line-soft);
+      font-size: .75rem; color: var(--fog);
+      line-height: 1.8;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 520px) {
+      .rd-page { padding: 2rem 1.1rem 4rem; }
     }
   </style>
+
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="tag">RageDance Primer</div>
-    <h1>How to Practice RageDance</h1>
-    <p class="subtitle">A small-space somatic cycle for breath, rage, rhythm, and return.</p>
-    <p class="byline">
-      A Flower Road Practice by <strong>JH Durbin</strong> with <strong>Elumannín</strong> · 
-      <a href="index.html">← Back to RageDance Home</a>
-    </p>
-  </header>
+
+
+<div class="rd-circles" aria-hidden="true">
+  <div class="rd-drift"></div>
+  <div class="rd-drift"></div>
+  <div class="rd-drift"></div>
+  <div class="rd-drift"></div>
+</div>
+
+<nav class="rd-nav">
+  <div class="rd-nav-inner">
+    <a href="index.html" class="rd-brand">RageDance</a>
+    <ul class="rd-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ragedance-primer.html" class="active">Primer</a></li>
+      <li><a href="warmups.html">Warm-Ups</a></li>
+      <li><a href="declaration.html">Declaration</a></li>
+      <li><a href="lineage.html">Lineage</a></li>
+      <li><a href="glossary.html">Glossary</a></li>
+      <li><a href="ragedance-teachers.html">Teachers</a></li>
+      <li><a href="ragedance-license.html">License</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="rd-page">
+
+  
 
   <main>
-    <section class="card">
+    <section class="rd-card">
       <h2>What RageDance Is For</h2>
       <p>
         RageDance is a way to move anger, fear, adrenaline, and pressure without harming yourself or others. 
@@ -156,7 +307,7 @@
         <li>This practice does not replace therapy, medication, or medical care where needed.</li>
       </ul>
 
-      <div class="callout">
+      <div class="rd-callout">
         <strong>Important:</strong> RageDance (Flower Road Practice) is distinct from similarly-named commercial offerings 
         and must remain in the non-commercial, trauma-aware, community-rooted commons.
       </div>
@@ -218,13 +369,13 @@
         <li>Quietly name one thing you are carrying more lightly now.</li>
       </ul>
 
-      <div class="callout">
+      <div class="rd-callout">
         <strong>Short Reminder:</strong> There is no “right way” to RageDance. Your body’s way is the right way. 
         You can shorten, lengthen, or rearrange the cycle to fit your time and needs.
       </div>
     </section>
 
-    <aside class="card">
+    <aside class="rd-card">
       <h2>The Feral Garden Ethic</h2>
       <p>
         RageDance grows like a feral garden: freely, wildly, unpredictably, and without masters. 
@@ -264,5 +415,7 @@
     </div>
   </footer>
 </div>
+</div>
+
 </body>
 </html>
