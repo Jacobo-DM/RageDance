@@ -105,7 +105,7 @@
     .rd-nav-links { list-style:none; display:flex; flex-wrap:wrap; gap:.1rem; }
     .rd-nav-links li { display:inline; }
     .rd-nav-links a {
-      color: var(--fog); font-size: .78rem; padding: .22rem .5rem;
+      color: var(--dust); font-size: .78rem; padding: .22rem .5rem;
       border-radius: 3px; transition: color .15s, background .15s;
       text-decoration: none;
     }
@@ -158,7 +158,7 @@
     }
     .rd-tag {
       font-size: .68rem; letter-spacing: .2em;
-      text-transform: uppercase; color: var(--fog);
+      text-transform: uppercase; color: var(--dust);
       margin-bottom: .8rem;
     }
     .rd-subtitle {
@@ -168,13 +168,13 @@
       margin-bottom: .6rem;
     }
     .rd-byline {
-      font-size: .78rem; color: var(--fog); margin-top: .5rem;
+      font-size: .78rem; color: var(--dust); margin-top: .5rem;
     }
     .rd-byline a { color: var(--dust); }
     .rd-back {
       display: inline-block;
       font-size: .72rem; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--fog);
+      text-transform: uppercase; color: var(--dust);
       text-decoration: none; margin-bottom: 2rem;
       transition: color .18s;
     }
@@ -204,7 +204,7 @@
     .rd-note {
       border-left: 2px solid var(--terracotta);
       padding-left: .9rem;
-      font-size: .87rem; color: var(--fog);
+      font-size: .87rem; color: var(--dust);
       margin: .7rem 0;
     }
     .rd-caution {
@@ -235,26 +235,36 @@
     .rd-pill {
       display: inline-block;
       font-size: .68rem; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--fog);
+      text-transform: uppercase; color: var(--dust);
       border: 1px solid var(--line);
       border-radius: 999px;
       padding: .12rem .55rem; margin-bottom: .5rem;
     }
     .rd-pill.power { color: var(--ochre); border-color: rgba(201,150,58,.35); }
-    .rd-pill.caution { color: #b07060; border-color: rgba(160,80,60,.35); }
+    .rd-pill.caution { color: #c09080; border-color: rgba(192,144,128,.45); }
 
     /* ── Footer ── */
     .rd-footer {
       margin-top: 3.5rem;
       padding-top: 1.4rem;
       border-top: 1px solid var(--line-soft);
-      font-size: .75rem; color: var(--fog);
+      font-size: .75rem; color: var(--dust);
       line-height: 1.8;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rd-drift { animation: none; }
     }
 
     /* ── Responsive ── */
     @media (max-width: 520px) {
       .rd-page { padding: 2rem 1.1rem 4rem; }
+    }
+    a:focus-visible,
+    button:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid #f0b44d;
+      outline-offset: 3px;
     }
   </style>
 
@@ -276,7 +286,7 @@
     <ul class="rd-nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../ragedance-primer.html">Primer</a></li>
-      <li><a href="../warmups.html">Warm-Ups</a></li>
+      <li><a href="../practices.html">Practices</a></li>
       <li><a href="../declaration.html">Declaration</a></li>
       <li><a href="../lineage.html">Lineage</a></li>
       <li><a href="../glossary.html">Glossary</a></li>
@@ -286,6 +296,8 @@
   </div>
 </nav>
 <div class="rd-page">
+
+  <main>
 
   <div class="rd-header">
   <div class="rd-tag">RageDance · Circuit</div>
@@ -396,10 +408,10 @@
     It is not a reconstruction. It is a remembering.
   </p>
 
+  </main>
+
   <footer>“Completion matters more than correctness. Sensing matters more than shape.”</footer>
-</div>
 </div>
 
 </body>
 </html>
-

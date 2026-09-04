@@ -22,10 +22,11 @@ RageDance prioritizes **precision over intensity** and **presence over performan
 
 If you are new, begin with:
 
-- `field-notes/2025-12-12-unwinding.md`  
-  *(A grounding field note that captures the core logic of RageDance in practice)*
+- [`index.html`](index.html) — begin with a breath and an immediate introduction
+- [`ragedance-rd001-full-cycle.html`](ragedance-rd001-full-cycle.html) — the canonical full-cycle practice card
+- [`practices.html`](practices.html) — the complete practice library
 
-From there, explore practices, patterns, and modules at your own pace.
+From there, explore practices, patterns, and field materials at your own pace.
 
 ---
 
@@ -37,4 +38,3 @@ It is not designed to make anyone look powerful.
 It is designed to help people **stay human** under pressure.
 
 For lineage, ethics, and teaching guidance, see the linked documents in this repository.
-

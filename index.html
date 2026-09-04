@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -113,7 +113,7 @@
       font-size: 0.75rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--fog);
+      color: var(--dust);
       text-decoration: none;
       margin-bottom: 4rem;
       opacity: 0;
@@ -136,7 +136,7 @@
       font-size: 0.7rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--fog);
+      color: var(--dust);
       margin-bottom: 1.2rem;
     }
 
@@ -220,7 +220,7 @@
     .breath-note {
       margin-top: 1.1rem;
       font-size: 0.82rem;
-      color: var(--fog);
+      color: var(--dust);
       font-style: italic;
     }
 
@@ -269,7 +269,7 @@
       font-size: 0.68rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--fog);
+      color: var(--dust);
       margin-bottom: 1.6rem;
     }
 
@@ -306,7 +306,7 @@
 
     .path-desc {
       font-size: 0.85rem;
-      color: var(--fog);
+      color: var(--dust);
       line-height: 1.65;
     }
 
@@ -341,7 +341,7 @@
 
     footer p {
       font-size: 0.75rem;
-      color: var(--fog);
+      color: var(--dust);
       line-height: 1.8;
     }
 
@@ -360,10 +360,32 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      .drift { animation: none; }
+      .back,
+      .hero,
+      .first-breath,
+      .earth-line,
+      .what-it-is,
+      .paths,
+      .declaration,
+      footer {
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
+    }
+
     /* ── Responsive ── */
     @media (max-width: 480px) {
       .page { padding: 4rem 1.4rem 5rem; }
       h1 { font-size: 3.4rem; }
+    }
+    a:focus-visible,
+    button:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid #f0b44d;
+      outline-offset: 3px;
     }
   </style>
 </head>
@@ -381,6 +403,8 @@
   </div>
 
   <div class="page">
+
+    <main>
 
     <!-- Back to Circles in Motion -->
     <a class="back" href="https://jacobo-dm.github.io/circles-in-motion/">Circles in Motion</a>
@@ -447,13 +471,13 @@
         </div>
       </a>
 
-      <a class="path-row" href="warmups.html">
+      <a class="path-row" href="practices.html">
         <svg class="path-glyph" viewBox="0 0 28 28" fill="none">
           <circle cx="14" cy="14" r="10" stroke="#c9963a" stroke-width="1" stroke-dasharray="3 2"/>
         </svg>
         <div>
-          <div class="path-name">Warm-Ups</div>
-          <p class="path-desc">Simple movements to wake the joints and nervous system. Begin here if the full cycle feels like too much.</p>
+          <div class="path-name">Practices</div>
+          <p class="path-desc">Full cycles, warm-ups, movement patterns, Night Garden, and field practices.</p>
         </div>
       </a>
 
@@ -502,6 +526,8 @@
         without being ruled.
       </blockquote>
     </div>
+
+    </main>
 
     <!-- Footer -->
     <footer>

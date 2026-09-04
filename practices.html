@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RageDance Practices · A Flower Road Practice</title>
+  <meta name="description" content="A complete index of RageDance cycles, warm-ups, patterns, field practices, and practice agreements.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --clay: #1c1510;
+      --card: #251a12;
+      --terracotta: #c4623a;
+      --ochre: #c9963a;
+      --sand: #e8d9c4;
+      --dust: #a89070;
+      --pale: #f2e8d8;
+      --line: rgba(168, 144, 112, 0.28);
+      --max: 800px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 17px; }
+    body {
+      background: var(--clay);
+      color: var(--sand);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    a { color: var(--terracotta); text-decoration: none; }
+    a:hover { color: var(--pale); text-decoration: underline; }
+
+    .rd-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: linear-gradient(to bottom, #100b07, var(--clay));
+      border-bottom: 1px solid rgba(196, 98, 58, 0.18);
+    }
+    .rd-nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: .6rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .rd-brand {
+      font-family: 'Cormorant Upright', serif;
+      font-size: 1rem;
+      letter-spacing: .1em;
+      color: var(--pale);
+      white-space: nowrap;
+    }
+    .rd-brand:hover { text-decoration: none; }
+    .rd-nav-links { list-style: none; display: flex; flex-wrap: wrap; gap: .1rem; }
+    .rd-nav-links li { display: inline; }
+    .rd-nav-links a {
+      color: var(--dust);
+      font-size: .78rem;
+      padding: .22rem .5rem;
+      border-radius: 3px;
+    }
+    .rd-nav-links a:hover { color: var(--terracotta); background: rgba(196, 98, 58, .07); text-decoration: none; }
+    .rd-nav-links a.active { color: var(--terracotta); background: rgba(196, 98, 58, .08); }
+
+    .rd-page { max-width: var(--max); margin: 0 auto; padding: 2.8rem 1.5rem 5rem; }
+    header { margin-bottom: 2.4rem; padding-bottom: 1.6rem; border-bottom: 1px solid var(--line); }
+    .rd-tag {
+      color: var(--dust);
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-bottom: .8rem;
+    }
+    h1 {
+      font-family: 'Cormorant Upright', serif;
+      font-weight: 300;
+      font-size: clamp(2.2rem, 6vw, 3.4rem);
+      line-height: 1.1;
+      color: var(--pale);
+      letter-spacing: .04em;
+      margin-bottom: .7rem;
+    }
+    .subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--dust);
+      max-width: 620px;
+    }
+    section { margin: 2.2rem 0; }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--ochre);
+      margin-bottom: .8rem;
+    }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+    .entry {
+      display: block;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 1rem 1.1rem;
+      color: inherit;
+      transition: border-color .18s, transform .18s;
+    }
+    .entry:hover {
+      border-color: rgba(196, 98, 58, .55);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+    .entry h3 {
+      color: var(--pale);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.12rem;
+      font-weight: 300;
+      letter-spacing: .02em;
+      margin-bottom: .2rem;
+    }
+    .entry p { color: var(--dust); font-size: .86rem; line-height: 1.6; }
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--line);
+      color: var(--dust);
+      font-size: .75rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .entry { transition: none; }
+      .entry:hover { transform: none; }
+    }
+    @media (max-width: 620px) {
+      .rd-page { padding: 2rem 1.1rem 4rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
+    a:focus-visible,
+    button:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid #f0b44d;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="rd-nav" aria-label="Primary">
+    <div class="rd-nav-inner">
+      <a href="index.html" class="rd-brand">RageDance</a>
+      <ul class="rd-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ragedance-primer.html">Primer</a></li>
+        <li><a href="practices.html" class="active" aria-current="page">Practices</a></li>
+        <li><a href="declaration.html">Declaration</a></li>
+        <li><a href="lineage.html">Lineage</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="ragedance-teachers.html">Teachers</a></li>
+        <li><a href="ragedance-license.html">License</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="rd-page">
+    <main>
+      <header>
+        <div class="rd-tag">RageDance · Practice Library</div>
+        <h1>Practices</h1>
+        <p class="subtitle">Cycles, warm-ups, patterns, and field practices. Begin with what your body can hear today.</p>
+      </header>
+
+      <section aria-labelledby="begin-title">
+        <h2 id="begin-title">Begin Here</h2>
+        <div class="grid">
+          <a class="entry" href="ragedance-rd001-full-cycle.html">
+            <h3>RD-001 · Full Cycle</h3>
+            <p>The canonical, timed practice card. Follow it, shorten it, or adapt it.</p>
+          </a>
+          <a class="entry" href="ragedance-primer.html">
+            <h3>The Primer</h3>
+            <p>Purpose, safety, consent, and the Feral Garden ethic around the cycle.</p>
+          </a>
+        </div>
+      </section>
+
+      <section aria-labelledby="warm-title">
+        <h2 id="warm-title">Warm-Ups</h2>
+        <div class="grid">
+          <a class="entry" href="warmups.html">
+            <h3>Warm-Up Menu</h3>
+            <p>Structured Purpose / How / Why it helps guidance with safety principles.</p>
+          </a>
+          <a class="entry" href="warmups/index.html">
+            <h3>Listening-Based Warmups</h3>
+            <p>Optional, responsive invitations for orientation, warmth, and internal feedback.</p>
+          </a>
+        </div>
+      </section>
+
+      <section aria-labelledby="movement-title">
+        <h2 id="movement-title">Sequences &amp; Patterns</h2>
+        <div class="grid">
+          <a class="entry" href="night-garden-winter.html">
+            <h3>Night Garden · Winter</h3>
+            <p>An eight-part cold-evening sequence for warmth, listening, and return.</p>
+          </a>
+          <a class="entry" href="patterns/index.html">
+            <h3>Patterns &amp; Circuits</h3>
+            <p>Infinity Elbow, Full Moon Arc, and the growing pattern collection.</p>
+          </a>
+          <a class="entry" href="patterns/full_moon_arc.html">
+            <h3>Full Moon Arc</h3>
+            <p>An adjustable whole-body circuit: completion over correctness, sensing over shape.</p>
+          </a>
+          <a class="entry" href="sequences/pendulum-clocks-sequence.html">
+            <h3>Pendulum Clocks</h3>
+            <p>A written sequence of pendulum movement, breath, play, and recalibration.</p>
+          </a>
+        </div>
+      </section>
+
+      <section aria-labelledby="field-title">
+        <h2 id="field-title">Field &amp; Shared Practice</h2>
+        <div class="grid">
+          <a class="entry" href="field_practices/fp1.html">
+            <h3>Field Practice 1 · Pulse Awareness</h3>
+            <p>A field practice for noticing pulse before, during, and after movement.</p>
+          </a>
+          <a class="entry" href="Borderlands/shared-principles.html">
+            <h3>Shared Principles · Borderlands</h3>
+            <p>Principles carried across RageDance and Circles in Motion.</p>
+          </a>
+          <a class="entry" href="ragedance-teachers.html">
+            <h3>For Teachers &amp; Facilitators</h3>
+            <p>A timed, scalable group template with consent and safety red lines.</p>
+          </a>
+          <a class="entry" href="ethics.html">
+            <h3>Ethics · Short Card</h3>
+            <p>Five practice agreements at a glance; the Declaration carries the fuller context.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      RageDance · A Flower Road Practice · developed by Jacobo Hernandez Durbin with Elumannín and the braid
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pendulum + Clocks Sequence · RageDance</title>
+  <meta name="description" content="A RageDance sequence for whole-body coordination: squat pendulum, 360-degree clocks layer, and cool-down hold.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --clay: #1c1510;
+      --card: #251a12;
+      --terracotta: #c4623a;
+      --ochre: #c9963a;
+      --sand: #e8d9c4;
+      --dust: #a89070;
+      --pale: #f2e8d8;
+      --line: rgba(168, 144, 112, .28);
+      --max: 800px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 17px; }
+    body {
+      background: var(--clay);
+      color: var(--sand);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+    a { color: var(--terracotta); text-decoration: none; }
+    a:hover { color: var(--pale); text-decoration: underline; }
+    a:focus-visible,
+    button:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid #f0b44d;
+      outline-offset: 3px;
+    }
+
+    .rd-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: linear-gradient(to bottom, #100b07, var(--clay));
+      border-bottom: 1px solid rgba(196, 98, 58, .18);
+    }
+    .rd-nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: .6rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .rd-brand {
+      color: var(--pale);
+      font-family: 'Cormorant Upright', serif;
+      font-size: 1rem;
+      letter-spacing: .1em;
+      white-space: nowrap;
+    }
+    .rd-brand:hover { text-decoration: none; }
+    .rd-nav-links { list-style: none; display: flex; flex-wrap: wrap; gap: .1rem; }
+    .rd-nav-links li { display: inline; margin: 0; }
+    .rd-nav-links a {
+      color: var(--dust);
+      font-size: .78rem;
+      padding: .22rem .5rem;
+      border-radius: 3px;
+    }
+    .rd-nav-links a:hover { color: var(--terracotta); background: rgba(196, 98, 58, .07); text-decoration: none; }
+    .rd-nav-links a.active { color: var(--terracotta); background: rgba(196, 98, 58, .08); }
+
+    .rd-page { max-width: var(--max); margin: 0 auto; padding: 2.8rem 1.5rem 5rem; }
+    .rd-header { margin-bottom: 2.4rem; padding-bottom: 1.6rem; border-bottom: 1px solid var(--line); }
+    .rd-tag {
+      color: var(--dust);
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-bottom: .8rem;
+    }
+    h1 {
+      color: var(--pale);
+      font-family: 'Cormorant Upright', serif;
+      font-size: clamp(2.1rem, 6vw, 3.2rem);
+      font-weight: 300;
+      letter-spacing: .04em;
+      line-height: 1.1;
+      margin-bottom: .6rem;
+    }
+    .rd-subtitle {
+      color: var(--dust);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.08rem;
+      font-style: italic;
+    }
+    .rd-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 1.3rem 1.4rem 1.4rem;
+      margin: 1.2rem 0;
+    }
+    h2 {
+      color: var(--terracotta);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 300;
+      letter-spacing: .03em;
+      margin-bottom: .45rem;
+    }
+    h3 {
+      color: var(--sand);
+      font-size: .92rem;
+      font-weight: 400;
+      letter-spacing: .1em;
+      margin: 1.2rem 0 .3rem;
+      text-transform: uppercase;
+    }
+    p { color: var(--dust); font-size: .95rem; margin-bottom: .8rem; }
+    p strong, li strong { color: var(--sand); font-weight: 400; }
+    ul { padding-left: 1.2rem; margin-bottom: .9rem; }
+    li { color: var(--dust); font-size: .93rem; margin-bottom: .3rem; }
+    .rd-caution {
+      border-left: 2px solid #c09080;
+      color: #c09080;
+      font-size: .88rem;
+      margin: 1rem 0;
+      padding-left: .9rem;
+    }
+    .rd-caution strong { color: var(--sand); }
+    .rd-note {
+      border-left: 2px solid var(--ochre);
+      color: var(--dust);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.08rem;
+      font-style: italic;
+      margin: 1rem 0;
+      padding-left: .9rem;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--dust);
+      font-size: .76rem;
+      margin-top: 3rem;
+      padding-top: 1.3rem;
+    }
+    footer a + a::before { color: var(--dust); content: ' · '; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+    }
+    @media (max-width: 620px) {
+      .rd-page { padding: 2rem 1.1rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="rd-nav" aria-label="Primary">
+    <div class="rd-nav-inner">
+      <a href="../index.html" class="rd-brand">RageDance</a>
+      <ul class="rd-nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../ragedance-primer.html">Primer</a></li>
+        <li><a href="../practices.html" class="active" aria-current="page">Practices</a></li>
+        <li><a href="../declaration.html">Declaration</a></li>
+        <li><a href="../lineage.html">Lineage</a></li>
+        <li><a href="../glossary.html">Glossary</a></li>
+        <li><a href="../ragedance-teachers.html">Teachers</a></li>
+        <li><a href="../ragedance-license.html">License</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="rd-page">
+    <main>
+      <header class="rd-header">
+        <div class="rd-tag">RageDance · Sequence</div>
+        <h1>Pendulum + Clocks</h1>
+        <p class="rd-subtitle">A 360° whole-body integration sequence: squat pendulum, clocks layer, and cool-down hold.</p>
+      </header>
+
+      <section class="rd-card">
+        <h2>Overview</h2>
+        <p>
+          This is a RageDance sequence for <strong>whole-body coordination</strong> without isolating parts.
+          It begins close to the ground with a supported squat and pendulum, then opens into
+          <strong>360° movement</strong>—the cardinal points and every space between.
+        </p>
+        <p>The aim is not perfect form. The aim is <strong>flow with awareness</strong>:</p>
+        <ul>
+          <li>balance and breath</li>
+          <li>spine and legs working together</li>
+          <li>circular motion, clockwise and counter-clockwise</li>
+          <li>shifting orientation in space: north, east, south, west, and all angles between</li>
+          <li>listening to sensory change: sound, light, shadow, and momentum</li>
+        </ul>
+        <p>At first it can feel awkward. Once the flow arrives, it becomes smooth and enjoyable.</p>
+        <aside class="rd-caution">
+          <strong>Safety:</strong> Warm up fully first. Move slowly. If anything feels sharp or unstable,
+          reduce range, add support, switch to the seated version, or stop.
+        </aside>
+      </section>
+
+      <section class="rd-card">
+        <h2>The Pendulum Squat</h2>
+        <p>This foundational sequence begins close to the ground and uses support rather than force.</p>
+
+        <h3>Setup</h3>
+        <ul>
+          <li>Begin after a full warm-up.</li>
+          <li>Lower into a deep squat, resting comfortably on the toes, the full foot, or any combination that feels stable.</li>
+          <li>Let the elbows rest gently on the knees for support.</li>
+        </ul>
+        <p>Balance should feel <strong>available</strong>, not strained.</p>
+
+        <h3>Pendulum Formation</h3>
+        <ul>
+          <li>Extend the arms forward.</li>
+          <li>Interlace the fingers loosely, forming a soft “ball.”</li>
+          <li>This becomes the pendulum.</li>
+        </ul>
+
+        <h3>Movement</h3>
+        <ul>
+          <li>Begin to sway and explore.</li>
+          <li>Let motion arise from the core, then involve the spine.</li>
+          <li>Explore side-to-side, forward and back, and gentle rotation.</li>
+        </ul>
+        <p>Allow the spine to follow the pendulum rather than directing it.</p>
+
+        <h3>Rising Out of the Squat</h3>
+        <ul>
+          <li>As the arms gradually lift, begin to rise.</li>
+          <li>Hands may brace the knees at any point if there is wobble.</li>
+          <li>If pain or instability appears, reduce range, slow down, or pause.</li>
+        </ul>
+
+        <h3>Seated Option</h3>
+        <p>
+          The entire sequence can be performed seated: feet grounded, elbows resting on the thighs if useful,
+          with the same slow pendulum motion. Repeat as desired.
+        </p>
+      </section>
+
+      <section class="rd-card">
+        <h2>The Clocks Layer</h2>
+        <p>
+          The clocks layer is continuous circular movement, clockwise and counter-clockwise, expressed through the whole body.
+          It moves toward the cardinal points and through every angle between them. Each shift changes balance, momentum,
+          and sensory input. This is not symbolic. It is physical and perceptual.
+        </p>
+
+        <h3>How It Enters</h3>
+        <ul>
+          <li>It may arise naturally from the pendulum squat or begin once standing.</li>
+          <li>Arms, legs, spine, and breath circulate together.</li>
+          <li>Direction changes remain gradual and responsive.</li>
+        </ul>
+
+        <h3>What Changes</h3>
+        <ul>
+          <li>muscular engagement</li>
+          <li>balance and momentum</li>
+          <li>sound, light, shadow, and spatial awareness</li>
+        </ul>
+        <p>Each direction offers a distinct sensory experience.</p>
+
+        <h3>Early Awkwardness</h3>
+        <p>
+          At first, clocks can feel unfamiliar or clumsy. This is expected. As continuity develops, movement becomes smoother,
+          transitions begin to link, and the body anticipates the next arc. Once the flow arrives, the sequence often feels effortless and enjoyable.
+        </p>
+
+        <h3>Awareness</h3>
+        <p>During clocks, the body moves, attention listens, and the mind observes rather than directs.</p>
+        <p>There is no fixed “correct” direction. The practice is exploratory and responsive.</p>
+      </section>
+
+      <section class="rd-card">
+        <h2>Cooling Down: Holding the Pattern</h2>
+        <p>Cooling down does not require immediately changing the state of the body.</p>
+        <p>
+          After the sequence—when breath has returned naturally and the body feels open, coordinated, or lightly humming—
+          <strong>pause</strong>. Remain still for a short time, in silence or with music that feels supportive rather than directive.
+        </p>
+        <p>The emphasis is not relaxation as collapse, but <strong>rest with awareness</strong>.</p>
+
+        <h3>Why This Matters</h3>
+        <p>Holding the state allows the body to:</p>
+        <ul>
+          <li>recognize the pattern it has entered</li>
+          <li>associate movement with ease and coherence</li>
+          <li>remember the feeling of being in tune</li>
+        </ul>
+        <p>
+          Nothing needs to be forced or analyzed. Simply staying with the sensation is enough. Over time, this supports pattern
+          recognition and recall. The feeling does not remain confined to practice—it gradually becomes familiar.
+        </p>
+      </section>
+
+      <section class="rd-card">
+        <h2>Language, Care, and Endlessness</h2>
+        <p>
+          RageDance avoids rigid labels and corrective framing. Rather than focusing on “fixing” or “optimizing,”
+          this practice emphasizes noticing, anchoring, and remembering.
+        </p>
+        <p>
+          Small choices in language matter. A single word can change how a practice is received or avoided.
+          Care is taken to describe experience without imposing interpretation.
+        </p>
+
+        <h3>On Care</h3>
+        <p>
+          This sequence is adaptable by design. Support, slowness, and range reduction are always valid options.
+          There is no benefit in pushing through pain or instability. Listening is part of the practice.
+        </p>
+
+        <h3>On Endlessness</h3>
+        <p>
+          RageDance is not a system of finite forms or goals. It does not aim toward accumulation or completion.
+          Forms emerge. They evolve. They dissolve. The practice remains open.
+        </p>
+        <p class="rd-note">
+          What matters is not reaching an endpoint, but developing the capacity to move with awareness, agency,
+          and responsiveness—again and again, in changing conditions.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <a href="../practices.html">← Back to Practices</a>
+      <a href="pendulum-clocks-sequence.md">Source notes</a>
+    </footer>
+  </div>
+</body>
+</html>
